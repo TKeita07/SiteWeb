@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pliage Québec</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<!--------------------------------------------------- Debut du Header --------------------------------------------------->
+
+<body id="top">
+
+<header>
+  <div class="logo">
+    <img src="https://static.wixstatic.com/media/54c4a1_61b8976752374883a1e98cb0599bb82a~mv2.png" alt="Logo Pliage Québec">
+  </div>
+  <div class="contact">
+    <div><a href="tel:14186828653">418-682-8653</a></div>
+    <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+    <div>1023 rue Rivard, Québec, QC G1M 3G8</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <div class="dropdown">
+    <a href="produits.html" class="menu-item">Produits</a>
+    <div class="dropdown-content">
+        <a href="produits-metal.html" class="TODO">Matériaux</a>
+        <a href="produits-aluminium.html" class="TODO">Couleurs</a>
+        <a href="produits-acier.html" class="TODO">Moulures</a>
+        <a href="produits-acier.html" class="TODO">Revêtements</a>
+        <a href="produits-acier.html" class="TODO">Accessoires</a>
+    </div>
+  </div>
+  <a href="services.html">Services</a>
+  <a href="projets.html">Projets</a>
+  <a href="apropos.html">À propos</a>
+  <a href="/contact" class="TODO">Contact</a>
+  <a href="/soumission" class="TODO">Soumission</a>
+</nav>
+
+<!--------------------------------------------------- Fin du Header --------------------------------------------------->
+
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="nav left" onclick="changeImage(-1)">&#10094;</span>
+
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <span class="nav right" onclick="changeImage(1)">&#10095;</span>
+</div>
+
+
+<section id="fournisseurs" class="vbox_center"> 
+    
+    <h1 style="font-size: 56">Nos réalisations</h1>
+
+   
+</section>
+
+<section class="image-grid">
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+      <img src="images/test10.jpeg" alt="Image 1">
+    </div>
+    <p class="caption">Sous-titre 1</p>
+  </div>
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+    <img src="images/test11.jpeg" alt="Image 2">
+    </div>
+    <p class="caption">Sous-titre 2</p> 
+  </div>  
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+      <img src="images/test15.jpeg" alt="Image 1">
+    </div>
+    <p class="caption">Sous-titre 1</p>
+  </div>
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+    <img src="images/test14.jpeg" alt="Image 2">
+    </div>
+    <p class="caption">Sous-titre 2</p> 
+  </div>  
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+      <img src="images/test14.jpeg" alt="Image 1">
+    </div>
+    <p class="caption">Sous-titre 1</p>
+  </div>
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+    <img src="images/test17.jpeg" alt="Image 2">
+    </div>
+    <p class="caption">Sous-titre 2</p> 
+  </div>  
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+      <img src="images/test5.jpeg" alt="Image 1">
+    </div>
+    <p class="caption">Sous-titre 1</p>
+  </div>
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+    <img src="images/test4.jpeg" alt="Image 2">
+    </div>
+    <p class="caption">Sous-titre 2</p> 
+  </div>  
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+      <img src="images/test19.jpeg" alt="Image 1">
+    </div>
+    <p class="caption">Sous-titre 1</p>
+  </div>
+  <div class="image-item" onclick="openLightbox(this)">
+    <div class="image-wrapper">
+    <img src="images/test7.jpeg" alt="Image 2">
+    </div>
+    <p class="caption">Sous-titre 2</p> 
+  </div>  
+
+  <!-- Ajoute autant d’images que tu veux -->
+</section>
+
+
+
+
+
+<!--------------------------------------------------- Debut du Footer --------------------------------------------------->
+<hr><!-- Footer -->
+
+<section class="footer">
+  <div class="footer-column">
+    <img src="https://static.wixstatic.com/media/54c4a1_3c93a368be704a07a7b18e1c14a6fd8b~mv2.jpg/v1/fill/w_233,h_84,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_PNG_edited_edited.jpg" alt="Logo Pliage Québec" class="footer-logo">
+  </div>
+
+  <div class="footer-column">
+    <h1 style="color:rgb(0, 0, 0);">Siège social</h1>
+    <p>1023 rue Rivard</p>
+    <p>Québec, Qc, G1M3G8</p>
+    <p><a href="tel:14186828653">418-682-8653</a></p>
+    <p><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></p>
+  </div>
+
+  <div class="footer-column">
+    <h1 style="color:rgb(0, 0, 0);">Réseaux sociaux</h1>
+    <p><a href="https://www.facebook.com/pliagequebec" target="_blank">Facebook</a></p>
+  </div>
+
+  <div class="footer-column">
+    <h1 style="color:rgb(0, 0, 0);">Questions</h1>
+    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
+    <a href="https://isabellelemoine0.wixsite.com/pliageqc/contact" class="contact-button" class="TODO">Nous contacter</a>
+  </div>
+</section>
+
+<section class="legal-footer">
+  <div class="legal-infos">
+    <div class="legal-links">
+        <p><a href="https://isabellelemoine0.wixsite.com/pliageqc/politique-de-cookies" class="TODO">Politique de cookies</a></p>
+        <p><a href="https://isabellelemoine0.wixsite.com/pliageqc/politique-de-confidentialité" class="TODO">Politique de confidentialité</a></p>
+        <p><a href="https://isabellelemoine0.wixsite.com/pliageqc/mentions-légales" class="TODO">Mentions légales</a></p>
+    </div>
+    <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
+  </div>
+    <div class="back-to-top">
+    <a href="#top">Remonter</a>
+  </div>
+</section>
+
+
+<script>
+  const futureLinks = document.querySelectorAll('.TODO');
+  futureLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Simule une page indisponible
+      window.location.href = 'todo.html';
+    });
+  });
+</script>
+
+<!--------------------------------------------------- Fin du Footer --------------------------------------------------->
+
+
+<script>
+  const imageElements = Array.from(document.querySelectorAll('.image-item'));
+  let currentIndex = 0;
+
+  function openLightbox(item) {
+    currentIndex = imageElements.indexOf(item);
+    updateLightbox();
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = imageElements.length - 1;
+    if (currentIndex >= imageElements.length) currentIndex = 0;
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    const item = imageElements[currentIndex];
+    const img = item.querySelector('img');
+    const caption = item.querySelector('.caption')?.innerText || "";
+
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-caption').innerText = caption;
+  }
+</script>
+
+
+<script>
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
+
+
+</body>
+</html>

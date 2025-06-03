@@ -8,9 +8,11 @@
 </head>
 
 
+
+<!--------------------------------------------------- Debut du Header --------------------------------------------------->
+
 <body id="top">
 
-<!-- Header -->
 <header>
   <div class="logo">
     <img src="https://static.wixstatic.com/media/54c4a1_61b8976752374883a1e98cb0599bb82a~mv2.png" alt="Logo Pliage Québec">
@@ -22,11 +24,10 @@
   </div>
 </header>
 
-<!-- Navigation -->
 <nav>
-  <a href="/" class="TODO">Accueil</a>
+  <a href="index.html">Accueil</a>
   <div class="dropdown">
-    <a href="produits.html" class="TODO" class="menu-item">Produits</a>
+    <a href="produits.html" class="menu-item">Produits</a>
     <div class="dropdown-content">
         <a href="produits-metal.html" class="TODO">Matériaux</a>
         <a href="produits-aluminium.html" class="TODO">Couleurs</a>
@@ -35,14 +36,18 @@
         <a href="produits-acier.html" class="TODO">Accessoires</a>
     </div>
   </div>
-  <a href="/services" class="TODO">Services</a>
-  <a href="/projets" class="TODO">Projets</a>
-  <a href="/a-propos" class="TODO">À propos</a>
+  <a href="services.html">Services</a>
+  <a href="projets.html">Projets</a>
+  <a href="apropos.html">À propos</a>
   <a href="/contact" class="TODO">Contact</a>
   <a href="/soumission" class="TODO">Soumission</a>
 </nav>
 
-<!-- Section avec image et texte -->
+<!--------------------------------------------------- Fin du Header --------------------------------------------------->
+
+
+
+
 <section id="intro" class="intro">
   <img src="https://static.wixstatic.com/media/11062b_8c95415e2ae5467ab321b597ba1b58ce~mv2.jpg" 
        alt="Métal noir" 
@@ -53,16 +58,13 @@
     <p>Spécialiste de la transformation de métal en feuille</p>
 
     <div class="intro-button-row">
-        <button>Voir nos réalisations</button>
-        <button>Contactez-nous</button>
-        <button>Surplus d'inventaire</button>
+        <button onclick="document.location='projets.html'" class="TODO">Voir nos réalisations</button>
+        <button onclick="document.location='contact.html'" class="TODO">Contactez-nous</button>
+        <button onclick="document.location='promos.html'" class="TODO">Surplus d'inventaire</button>
     </div>
   </div>
-
 </section>
 
-
-<!-- Section avec image et texte -->
 <section id="Services" class="hbox">
     <section id="services_texts" class="vbox">    
         <div class="some-title">
@@ -79,8 +81,6 @@
     alt="Services.JPG" 
     width="752" height="450">
 </section>
-
-
 
 <!-- Section avec image et texte -->
 <section id="Produits" class="hbox">
@@ -121,40 +121,40 @@
   <button class="carousel-button left" onclick="scrollCarousel(-1)">&#10094;</button>
 
   <div class="carousel-container" id="carousel">
-    <div class="carousel-item">
+    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/test11.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
-    <div class="carousel-item">
-        <img src="images/test3.jpeg" alt="Image 1">
+    <div class="carousel-item" onclick="openLightbox(this)">
+        <img src="images/test4.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/test7.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
 
-    <div class="carousel-item">
+    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/test8.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
 
-    <div class="carousel-item">
+    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/test6.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
 
-    <div class="carousel-item">
+    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/test9.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
 
-    <div class="carousel-item">
+    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/test10.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
 
-    <div class="carousel-item">
+    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/test5.jpeg" alt="Image 1">
         <div class="overlay-text">C'est Polly Penny !!!</div>
     </div>
@@ -165,7 +165,18 @@
   <button class="carousel-button right" onclick="scrollCarousel(1)">&#10095;</button>
 </section>
 
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="nav left" onclick="changeImage(-1)">&#10094;</span>
 
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <span class="nav right" onclick="changeImage(1)">&#10095;</span>
+</div>
 
 <!-- Section avec image et texte -->
 <section id="fournisseurs" class="vbox_center"> 
@@ -189,11 +200,11 @@
             alt="Polly"
             width="350" height="150">
 
-        </section>
     </section>
 </section>
 
 
+<!--------------------------------------------------- Debut du Footer --------------------------------------------------->
 <hr><!-- Footer -->
 
 <section class="footer">
@@ -247,6 +258,48 @@
   });
 </script>
 
+<!--------------------------------------------------- Fin du Footer --------------------------------------------------->
+
+
+
+<script>
+  const imageElements = Array.from(document.querySelectorAll('.carousel-item'));
+  let currentIndex = 0;
+
+  function openLightbox(item) {
+    currentIndex = imageElements.indexOf(item);
+    updateLightbox();
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = imageElements.length - 1;
+    if (currentIndex >= imageElements.length) currentIndex = 0;
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    const item = imageElements[currentIndex];
+    const img = item.querySelector('img');
+    const caption = item.querySelector('.overlay-text')?.innerText || "";
+
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-caption').innerText = caption;
+  }
+</script>
+
+<script>
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
 
 <script>
   function scrollCarousel(direction) {
@@ -255,5 +308,8 @@
     carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
   }
 </script>
+
+
+
 </body>
 </html>
