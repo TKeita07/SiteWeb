@@ -14,7 +14,7 @@
 
 <header>
   <div class="logo">
-    <img src="https://static.wixstatic.com/media/54c4a1_61b8976752374883a1e98cb0599bb82a~mv2.png" alt="Logo Pliage Québec">
+    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
   </div>
   <div class="contact">
     <div><a href="tel:14186828653">418-682-8653</a></div>
@@ -38,24 +38,515 @@
   <a href="services.html">Services</a>
   <a href="projets.html">Projets</a>
   <a href="apropos.html">À propos</a>
-  <a href="contact.html" class="TODO">Contact</a>
-  <a href="soumission.html" class="TODO">Soumission</a>
+  <a href="contact.html">Contact</a>
+  <a href="soumission.html">Soumission</a>
 </nav>
 
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
-<section id="Services" class="vbox" style="gap: 0px; padding: 150px 50px 50px 150px;">
 
-    <div class="some-big_blue_title">
-        <p>TODO</p>
+<body id="top">
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="nav left" onclick="changeImage(-1)">&#10094;</span>
+
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+    <p></p>
+  </div>
+
+  <span class="nav right" onclick="changeImage(1)">&#10095;</span>
+</div>
+
+
+<section class="vbox_center"  style="width:85%; padding-left: 0px; padding-right: 0px;">
+  <section class="vbox_center" style="width:75%; padding-left: 0px; gap: 15px; align-items: flex-start; min-width: 850px;"> 
+    <h1>Moulures</h1>
+    <br>
+    <p>Le choix de moulures que nous vous proposons est le résultat de plusieurs années d'expérience dans le domaine du pliage. Il regroupe tous les besoins pour le revêtement, la toiture ou la ferblanterie.</p>
+    <p>Toutes les moulures visibles ici sont faites à titre d’exemple. Tout peut être fait sur mesure.</p>
+    <p>N'hésitez pas à nous <a href="contact.html" style="color: black;">contacter</a>.</p>
+
+    <!-- Filtrer par Catégories -->
+    <div id="filters" style="padding: 20px 0px 0px 30px; gap: 100px;">
+      <p style="margin-bottom: 10px;">Filtrer par Catégories</p>
+      <label><input type="checkbox" class="filter" value="Revêtement"> Revêtement</label>
+      <label><input type="checkbox" class="filter" value="Toiture"> Toiture</label>
+      <label><input type="checkbox" class="filter" value="Ferblanterie"> Ferblanterie</label>
     </div>
+  </section>
+
+
+
+
+  <section class="image-gridshow">
+    
+    <section class="gid-box" data-categories="Toiture,Ferblanterie"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Agrafe pour flashing (Toiture-Ferblanterie).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Agrafe pour flashing</h1>
+          <br>
+          <p>Toiture, Ferblanterie</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Cache tuyau (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Cache tuyau</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Chaise (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Chaise</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Coin extérieur en X (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Coin extérieur en X</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Coin extérieur à fibro-ciment (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Coin extérieur à fibro-ciment</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Coin intérieur en W (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Coin intérieur en W</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Coin intérieur en X (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Coin intérieur en X</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Coin intérieur à fibro-ciment (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Coin intérieur à fibro-ciment</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Colonne avec un ou deux joints (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Colonne avec 1ou 2 joints</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Dessus de mur (Toiture).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Dessus de mur</h1>
+          <br>
+          <p>Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Dessus de mur avec flashing de côté (Toiture).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Dessus de mur flashing côté</h1>
+          <br>
+          <p>Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Fascia avec un nez (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Fascia avec un nez</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Fascia standard avec option agrafe (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Fascia standard option agrafe</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Fascia à l'ancienne (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Fascia à l'ancienne</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture,Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Faitière (Toiture-Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Faîtière</h1>
+          <br>
+          <p>Toiture, Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement,Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Faitière liberté (Toiture-Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Faîtière liberté</h1>
+          <br>
+          <p>Revêtement, Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Ferblanterie"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Flashing de cöté avec insertion de revêtment (Ferblanterie).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Flashing côté insertion revêtement</h1>
+          <br>
+          <p>Ferblanterie</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Flashing de bas (Toiture).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Flashing de bas</h1>
+          <br>
+          <p>Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Flashing de bas avec un nez (Toiture).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Flashing de bas avec nez</h1>
+          <br>
+          <p>Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Flashing de bas pincé (Ferblanterie).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Flashing de bas pincé</h1>
+          <br>
+          <p>Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Flashing de côté (Toiture).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Flashing de côté</h1>
+          <br>
+          <p>Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture,Ferblanterie"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Flashing ventilé (Toiture-Ferblanterie).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Flashing ventilé</h1>
+          <br>
+          <p>Toiture, Ferblanterie</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement,Ferblanterie"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Goutte d'eau (Ferblanterie-Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Goutte d'eau</h1>
+          <br>
+          <p>Revêtement, Ferblanterie</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Goutte d'eau plate avec un nez (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Goutte d'eau plate avec nez</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Ferblanterie,Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/J (Ferblanterie-Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">J</h1>
+          <br>
+          <p>Ferblanterie, Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Ferblanterie,Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/J intégral (Ferblanterie-Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">J intégral</h1>
+          <br>
+          <p>Ferblanterie, Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Moulure anti-rongeur (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Moulure anti-rongeur</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Moulure de départ (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Moulure de départ</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Moulure pour fer-angle (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Moulure pour fer-angle</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Ferblanterie"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Noue mural (Ferblanterie).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Noue mural</h1>
+          <br>
+          <p>Ferblanterie</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Ferblanterie"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Noue pour ferblanterie (Ferblanterie).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Noue pour ferblanterie</h1>
+          <br>
+          <p>Ferblanterie</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Ferblanterie,Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Solin de cheminée (Toiture-Ferblanterie).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Solin de cheminée</h1>
+          <br>
+          <p>Ferblanterie, Toiture</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Transition en H (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Transition en H</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Revêtement"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Transition en T (Revêtement).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Transition en T</h1>
+          <br>
+          <p>Revêtement</p>
+      </section>
+    </section>
+
+    <section class="gid-box" data-categories="Toiture"
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
+
+      <div class="image-gridshow-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Transition goutte d'eau-plafond (Toiture).JPG"/>
+      </div>
+      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+          <h1 style="font-size: 17px;">Transition goutte d'eau-plafond</h1>
+          <br>
+          <p>Toiture</p>
+      </section>
+    </section>
+
+  </section>
+
 </section>
+
 
 <!--------------------------------------------------- Debut du Footer --------------------------------------------------->
 <hr><!-- Footer -->
 
 <section class="footer">
   <div class="footer-column">
-    <img src="https://static.wixstatic.com/media/54c4a1_3c93a368be704a07a7b18e1c14a6fd8b~mv2.jpg/v1/fill/w_233,h_84,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_PNG_edited_edited.jpg" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -74,16 +565,16 @@
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
     <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="https://isabellelemoine0.wixsite.com/pliageqc/contact" class="contact-button" class="TODO">Nous contacter</a>
+    <a href="contact.html" class="contact-button">Nous contacter</a>
   </div>
 </section>
 
 <section class="legal-footer">
   <div class="legal-infos">
     <div class="legal-links">
-        <p><a href="https://isabellelemoine0.wixsite.com/pliageqc/politique-de-cookies" class="TODO">Politique de cookies</a></p>
-        <p><a href="https://isabellelemoine0.wixsite.com/pliageqc/politique-de-confidentialité" class="TODO">Politique de confidentialité</a></p>
-        <p><a href="https://isabellelemoine0.wixsite.com/pliageqc/mentions-légales" class="TODO">Mentions légales</a></p>
+        <p><a href="politique-de-cookies.html">Politique de cookies</a></p>
+        <p><a href="politique-de-confidentialité.html">Politique de confidentialité</a></p>
+        <p><a href="mentions-légales.html">Mentions légales</a></p>
     </div>
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
@@ -105,6 +596,84 @@
 </script>
 
 <!--------------------------------------------------- Fin du Footer --------------------------------------------------->
+
+<!---------------------- Scripts -------------------------->
+
+<script>
+  const checkboxes = document.querySelectorAll('.filter');
+  const boxes = document.querySelectorAll('.gid-box');
+
+
+  checkboxes.forEach(cb => cb.addEventListener('change', () => {
+    const activeFilters = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+    if (activeFilters.length === 0) {
+      boxes.forEach(box => box.style.display = 'flex');
+      return;
+    }
+    boxes.forEach(box => {
+      const categories = box.dataset.categories.split(',');
+      const match = categories.some(cat => activeFilters.includes(cat));
+      box.style.display = match ? 'flex' : 'none';
+    });
+  }));
+</script>
+
+<script>
+  let currentBoxElements = [];
+  let currentBoxImages = [];
+  let currentIndex = 0;
+
+  function openLightbox(clickedItem) {
+    const gridbox = clickedItem.closest('.image-gridshow');
+
+    // 🔧 Ne garder que les éléments visibles
+    currentBoxElements = Array.from(gridbox.querySelectorAll('.gid-box'))
+      .filter(el => el.style.display !== 'none');
+
+    currentBoxImages = currentBoxElements.map(el =>
+      el.querySelector('.image-gridshow-item')
+    );
+
+    currentIndex = currentBoxImages.indexOf(clickedItem);
+
+    updateLightbox();
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    currentSlideshowImages = [];
+  }
+
+  function changeImage(direction) {
+    if (currentBoxElements.length === 0) return;
+
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = currentBoxElements.length - 1;
+    if (currentIndex >= currentBoxElements.length) currentIndex = 0;
+
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    const item = currentBoxElements[currentIndex];
+    const img = item.querySelector('img');
+    const caption = item.querySelector('h1')?.innerText || "";
+
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-caption').innerText = caption;
+  }
+</script>
+
+<script>
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
 
 </body>
 </html>
