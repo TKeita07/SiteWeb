@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-
 <!--------------------------------------------------- Debut du Header --------------------------------------------------->
 
 <body id="top">
@@ -28,81 +27,136 @@
   <div class="dropdown">
     <a href="produits.html" class="menu-item">Produits</a>
     <div class="dropdown-content">
-        <a href="produits-materiaux.html" class="TODO">Matériaux</a>
-        <a href="produits-couleurs.html" class="TODO">Couleurs</a>
+        <a href="produits-materiaux.html">Matériaux</a>
+        <a href="produits-couleurs.html">Couleurs</a>
         <a href="produits-moulures.html" class="TODO">Moulures</a>
-        <a href="produits-revêtements.html" class="TODO">Revêtements</a>
-        <a href="produits-accessoires.html" class="TODO">Accessoires</a>
+        <a href="produits-revêtements.html">Revêtements</a>
+        <a href="produits-accessoires.html">Accessoires</a>
     </div>
   </div>
   <a href="services.html">Services</a>
   <a href="projets.html">Projets</a>
   <a href="apropos.html">À propos</a>
-  <a href="/contact" class="TODO">Contact</a>
-  <a href="/soumission" class="TODO">Soumission</a>
+  <a href="contact.html" class="TODO">Contact</a>
+  <a href="soumission.html" class="TODO">Soumission</a>
 </nav>
 
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
 
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <span class="nav left" onclick="changeImage(-1)">&#10094;</span>
+
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <span class="nav right" onclick="changeImage(1)">&#10095;</span>
+</div>
+
 <section id="produits1" class="hbox" style="justify-content: center;">
     <a href="produits-materiaux.html" class="centered-link"
-    style="left: 150px;">
+    style="left: 150px;
+    min-width: 400px;">
         Matériaux
     </a>
 
-  <img src="images/test17.jpeg"
-    alt="Services.JPG" 
-    width="55%" height="400">
+  <section class="slideshow hbox">
+    <div class="slideshow-counter">1/2</div>
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Matériaux/Acier galvalume du 26 au 22 GA.JPG" alt="Image 1">
+        <div class="some-overlay-text">Acier galvalume du 26 au 22 GA</div>
+    </div>
+
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Matériaux/Checketplate Épaisseur 1-16.JPG" alt="Image 1">
+        <div class="some-overlay-text">Checketplate Épaisseur 1-16</div>
+    </div>
+
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Matériaux/Stucco ou aluminium embossé 0.040 pouce.JPG" alt="Image 1">
+        <div class="some-overlay-text">Stucco ou aluminium embossé 0.040 pouce</div>
+    </div>
+  </section>
 </section>
 
 <section id="produits2" class="hbox" style="justify-content: center;">
-  <img src="images/test7.jpeg"
-    alt="Services.JPG" 
-    width="55%" height="400">
-
+    <div class="some-image-item">
+        <img src="images/Photos/Couleurs.JPG" alt="Test">
+    </div>
     
     <a href="produits-couleurs.html" class="centered-link"
-    style="left: -150px;">
+    style="left: -150px;
+    min-width: 400px;">
         Couleurs
     </a>
 </section>
 
-
 <section id="produits3" class="hbox" style="justify-content: center;">
     <a href="produits-moulures.html" class="centered-link"
-    style="left: 150px;">
+    style="left: 150px;
+    min-width: 400px;">
         Moulures
     </a>
 
-  <img src="images/test5.jpeg"
-    alt="Services.JPG" 
-    width="55%" height="400">
+  <section class="slideshow hbox">
+    <div class="slideshow-counter">1/2</div>
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Flashing ventilé.JPG" alt="Image 1">
+        <div class="some-overlay-text">Flashing ventilé</div>
+    </div>
+
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Cache tuyau.JPG" alt="Image 1">
+        <div class="some-overlay-text">Cache tuyau</div>
+    </div>
+
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Moulures/Coin intérieur en W.JPG" alt="Image 1">
+        <div class="some-overlay-text">Coin intérieur en W</div>
+    </div>
+  </section>
 </section>
 
 <section id="produits4" class="hbox" style="justify-content: center;">
-  <img src="images/test15.jpeg"
-    alt="Services.JPG" 
-    width="55%" height="400">
-
+    <div class="some-image-item">
+        <img src="images/Photos/Revêtements.jpg" alt="Test">
+    </div>
     
-    <a href="produits-revêtements.html" class="centered-link"
-    style="left: -150px;">
+    <a href="produits-revetements.html" class="centered-link"
+    style="left: -150px;
+    min-width: 400px;">
         Revêtements
     </a>
 </section>
 
-
 <section id="produits5" class="hbox" style="justify-content: center;">
     <a href="produits-accessoires.html" class="centered-link"
-    style="left: 150px;">
+    style="left: 150px;
+    min-width: 400px;">
         Accessoires
     </a>
 
-  <img src="images/test16.jpeg"
-    alt="Services.JPG" 
-    width="55%" height="400">
-</section>
+  <section class="slideshow hbox">
+    <div class="slideshow-counter">1/2</div>
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Accessoires/Vis à fascia et à washer 1 1-2.jpg" alt="Image 1">
+        <div class="some-overlay-text">Vis à fascia et à washer 1 1-2</div>
+    </div>
 
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Accessoires/Touch up-1.JPG" alt="Image 1">
+        <div class="some-overlay-text">Touch up</div>
+    </div>
+
+    <div class="slide-image-item" onclick="openLightbox(this)">
+        <img src="images/Accessoires/Gargouilles.jpg" alt="Image 1">
+        <div class="some-overlay-text">Gargouilles</div>
+    </div>
+  </section>
+</section>
 
 <!--------------------------------------------------- Debut du Footer --------------------------------------------------->
 <hr><!-- Footer -->
@@ -159,6 +213,102 @@
 </script>
 
 <!--------------------------------------------------- Fin du Footer --------------------------------------------------->
+
+
+<script>
+document.querySelectorAll('.slideshow').forEach(slideshow => {
+  const slides = slideshow.querySelectorAll('.slide-image-item');
+  const counter = slideshow.querySelector('.slideshow-counter');
+  let slideIndex = 0;
+
+  function updateCounter() {
+    counter.textContent = `${slideIndex + 1}/${slides.length}`;
+  }
+
+  function showNextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    updateCounter();
+
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active', 'hovering');
+      if (index === slideIndex) {
+        slide.classList.add('active');
+        if (slideshow.matches(':hover')) {
+          slide.classList.add('hovering');
+        }
+      }
+    });
+  }
+
+  // Initialisation
+  if (slides.length > 0) {
+    slides[0].classList.add('active');
+    updateCounter();
+    setInterval(showNextSlide, 5000);
+  }
+
+  // Gestion du survol
+  slideshow.addEventListener('mouseenter', () => {
+    const current = slideshow.querySelector('.slide-image-item.active');
+    if (current) current.classList.add('hovering');
+  });
+
+  slideshow.addEventListener('mouseleave', () => {
+    const current = slideshow.querySelector('.slide-image-item.active');
+    if (current) current.classList.remove('hovering');
+  });
+});
+</script>
+
+
+
+
+
+<script>
+  let currentSlideshowImages = [];
+  let currentIndex = 0;
+
+  function openLightbox(clickedItem) {
+    const slideshow = clickedItem.closest('.slideshow');
+    currentSlideshowImages = Array.from(slideshow.querySelectorAll('.slide-image-item'));
+    currentIndex = currentSlideshowImages.indexOf(clickedItem);
+
+    updateLightbox();
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    currentSlideshowImages = [];
+  }
+
+  function changeImage(direction) {
+    if (currentSlideshowImages.length === 0) return;
+
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = currentSlideshowImages.length - 1;
+    if (currentIndex >= currentSlideshowImages.length) currentIndex = 0;
+
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    const item = currentSlideshowImages[currentIndex];
+    const img = item.querySelector('img');
+    const caption = item.querySelector('.some-overlay-text')?.innerText || "";
+
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-caption').innerText = caption;
+  }
+</script>
+
+<script>
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
 
 </body>
 </html>

@@ -1,8 +1,29 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: white;
+  
+  overflow-x: hidden;
+}
+
+body, html {
+  overflow: visible;
 }
 
 header {
@@ -19,6 +40,8 @@ header {
 h1 {
   margin: 0;
 }
+
+
 
 .logo img {
   height: 60px;
@@ -129,8 +152,10 @@ section.hbox {
   color: black;
   gap: 40px;
 }
+
 section.hbox_center {
   display: flex;
+  align-items: center;
   justify-content: center;       /* centre horizontalement */
   gap: 40px;
   padding: 40px;
@@ -139,9 +164,9 @@ section.hbox_center {
 
 section.vbox {
   display: flex;
-  flex-direction: column;       /* disposition verticale */
+  flex-direction: column; 
   justify-content: space-between;
-  align-items: flex-start; /* ✅ coller à droite */
+  align-items: flex-start;
   color: black;
 }
 
@@ -156,13 +181,8 @@ section.vbox_center {
 }
 
 
-section.hbox img {
-  max-width: 75%;
-  object-fit: cover;
-
-}section.hbox_center img {
-  max-width: 75%;
-  object-fit: cover;
+.simple-text {
+  font-size: 18px;
 }
 
 .some-text {
@@ -297,8 +317,6 @@ hr {
 .carousel-item:hover .overlay-text {
   opacity: 1;
 }
-
-
 
 /*  
    footer styles
@@ -463,17 +481,23 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.90);
+  background-color: rgba(0, 0, 0, 0.904);
   align-items: center;
   justify-content: center;
 }
 
 
 .lightbox-content {
-  position: relative;
+  position: relative;  
+  
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;       /* disposition verticale */
+  align-items: center;          /* centre les items horizontalement */
+  justify-content: center;      /* centre les items verticalement (si hauteur suffisante) */
+  margin: 0 auto;               /* centre le conteneur lui-même */
+  padding: 40px;
+  gap: 20px;
+  
   height: 100%;
   width: 100%;
 }
@@ -484,11 +508,7 @@ html {
 }
 
 .lightbox-caption {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
   padding: 10px 20px;
@@ -501,7 +521,7 @@ html {
   top: 30px;
   right: 50px;
   font-size: 40px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   z-index: 2100;
 }
@@ -510,7 +530,7 @@ html {
   position: absolute;
   top: 50%;
   font-size: 60px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   user-select: none;
   z-index: 2100;
@@ -587,4 +607,202 @@ html {
   color: black;
   font-size: 32px;
   
+}
+
+/* .some-image-item {
+  flex: 1;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: blueviolet;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+.some-image-item {
+  position: relative;
+  width: 55%;
+  min-width: 650px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.some-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.some-overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10; /* Assure que le texte est au-dessus de l'image */
+}
+
+.some-image-item:hover .some-overlay-text {
+  opacity: 1;
+}
+
+.slideshow {
+  cursor: pointer;
+  
+  position: relative;
+  width: 55%;
+  min-width: 650px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide-image-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.slide-image-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.slide-image-item:hover .some-overlay-text,
+.slide-image-item.hovering .some-overlay-text {
+  opacity: 1;
+}
+
+.slideshow-counter {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding: 6px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10; /* Assure que le texte est au-dessus de l'image */
+}
+
+
+.slideshow:hover .slideshow-counter,
+.slideshowhbox.hovering .slideshow-counter {
+  opacity: 1;
+}
+
+.image-gridshow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 25%));
+  gap: 25px;
+  max-width: 75%; /* Limite la largeur totale de la grille */
+  margin: auto; /* Centre la grille */
+  padding: 15px;
+}
+
+.gid-box {
+  display: flex;
+  flex-direction: column;       /* disposition verticale */
+  align-items: center;          /* centre les items horizontalement */
+  justify-content: center;      /* centre les items verticalement (si hauteur suffisante) */
+  margin: 0 auto;               /* centre le conteneur lui-même */
+  padding: 40px;
+  color: black;
+}
+
+.image-gridshow-item {
+
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* force un carré */
+  overflow: hidden;
+  box-shadow: #00000056 0px 0px 10px 0px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gridshow-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  object-position: center;
+}
+
+.image-gridshow-text {
+  font-size: 18px;
+}
+.gid-box:hover .image-gridshow-item {
+  transform: scale(0.90);
+}
+
+
+
+
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 25%));
+  gap: 25px;
+  max-width: 65%; /* Limite la largeur totale de la grille */
+  margin: auto; /* Centre la grille */
+  padding: 15px;
+}
+
+.color-grid-item {
+  aspect-ratio: 3 / 2; /* Carré */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+  
+  cursor: pointer;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: column;       /* disposition verticale */
+  align-items: center;          /* centre les items horizontalement */
+  justify-content: center;      /* centre les items verticalement (si hauteur suffisante) */
+  margin: 0 auto;               /* centre le conteneur lui-même */
+  padding: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.color-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: #000 2px solid;
+}
+.color-gridshow-text {
+  width: 100%;
+}
+
+.gid-box:hover .color-grid-item {
+  transform: scale(0.90);
 }

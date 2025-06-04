@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-
 <!--------------------------------------------------- Debut du Header --------------------------------------------------->
 
 <body id="top">
@@ -45,94 +44,37 @@
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
 
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="close" onclick="closeLightbox()">&times;</span>
-  <span class="nav left" onclick="changeImage(-1)">&#10094;</span>
+<section class="vbox_center" style="width:95%;">
 
-  <div class="lightbox-content">
-    <img class="lightbox-img" id="lightbox-img" src="" alt="">
-    <div id="lightbox-caption" class="lightbox-caption"></div>
-  </div>
-
-  <span class="nav right" onclick="changeImage(1)">&#10095;</span>
-</div>
+  <section class="vbox_center" style="width:65%; padding-left: 15px; gap: 0px; align-items: flex-start;"> 
+    <h1 style="width:65%; padding-bottom: 15px; gap: 0px; align-items: flex-start;">Revêtements</h1>
+    <br>
+    <p>Voici nos fournisseurs de revêtement qui vous permettront de faire votre choix pour vos murs et votre toit avec l’option de vis apparente ou non.</p>
+    <br>
+    <p>Pour plus d’information, n'hésitez pas à nous appeler ou à venir nos bureaux.</p>
+  </section>
 
 
-<section id="fournisseurs" class="vbox_center"> 
-    
-    <h1 style="font-size: 56">Nos réalisations</h1>
 
-   
+  <section class="vbox_center" style="width:65%; padding-left: 15px; gap: 0px;"> 
+    <section class="hbox" style="padding: 0px;"> 
+      <img style="object-fit: contain; height: auto; width: 600px;"
+        src="images/Revêtements/Gentek-removebg-preview.png"/>
+      <img style="object-fit: cover; height: 280px; width: 600px;"
+        src="images/Revêtements/Ideal_revêtement-removebg-preview.png"/>
+    </section>
+
+    <section class="hbox_center" style="padding: 0px;" > 
+      <img style="object-fit: contain; height: 250px; width: auto;"
+        src="images/Revêtements/Profilé_rgp-removebg-preview.png"/>
+      <img style="object-fit: cover; height: 250px; width: auto;"
+        src="images/Revêtements/Duschene_revêtement-removebg-preview.png"/>
+      <img style="object-fit: contain; height: 50px; width: auto;"
+        src="images/Revêtements/Metalunic-removebg-preview.png"/>
+    </section>
+  </section>
+
 </section>
-
-<section class="image-grid">
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-      <img src="images/test10.jpeg" alt="Image 1">
-    </div>
-    <p class="caption">Sous-titre 1</p>
-  </div>
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-    <img src="images/test11.jpeg" alt="Image 2">
-    </div>
-    <p class="caption">Sous-titre 2</p> 
-  </div>  
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-      <img src="images/test15.jpeg" alt="Image 1">
-    </div>
-    <p class="caption">Sous-titre 1</p>
-  </div>
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-    <img src="images/test14.jpeg" alt="Image 2">
-    </div>
-    <p class="caption">Sous-titre 2</p> 
-  </div>  
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-      <img src="images/test14.jpeg" alt="Image 1">
-    </div>
-    <p class="caption">Sous-titre 1</p>
-  </div>
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-    <img src="images/test17.jpeg" alt="Image 2">
-    </div>
-    <p class="caption">Sous-titre 2</p> 
-  </div>  
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-      <img src="images/test5.jpeg" alt="Image 1">
-    </div>
-    <p class="caption">Sous-titre 1</p>
-  </div>
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-    <img src="images/test4.jpeg" alt="Image 2">
-    </div>
-    <p class="caption">Sous-titre 2</p> 
-  </div>  
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-      <img src="images/test19.jpeg" alt="Image 1">
-    </div>
-    <p class="caption">Sous-titre 1</p>
-  </div>
-  <div class="image-item" onclick="openLightbox(this)">
-    <div class="image-wrapper">
-    <img src="images/test7.jpeg" alt="Image 2">
-    </div>
-    <p class="caption">Sous-titre 2</p> 
-  </div>  
-
-  <!-- Ajoute autant d’images que tu veux -->
-</section>
-
-
-
 
 
 <!--------------------------------------------------- Debut du Footer --------------------------------------------------->
@@ -190,48 +132,6 @@
 </script>
 
 <!--------------------------------------------------- Fin du Footer --------------------------------------------------->
-
-
-<script>
-  const imageElements = Array.from(document.querySelectorAll('.image-item'));
-  let currentIndex = 0;
-
-  function openLightbox(item) {
-    currentIndex = imageElements.indexOf(item);
-    updateLightbox();
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-
-  function changeImage(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) currentIndex = imageElements.length - 1;
-    if (currentIndex >= imageElements.length) currentIndex = 0;
-    updateLightbox();
-  }
-
-  function updateLightbox() {
-    const item = imageElements[currentIndex];
-    const img = item.querySelector('img');
-    const caption = item.querySelector('.caption')?.innerText || "";
-
-    document.getElementById('lightbox-img').src = img.src;
-    document.getElementById('lightbox-caption').innerText = caption;
-  }
-</script>
-
-
-<script>
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      closeLightbox();
-    }
-  });
-</script>
-
 
 </body>
 </html>

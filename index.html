@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-
-
 <!--------------------------------------------------- Debut du Header --------------------------------------------------->
 
 <body id="top">
@@ -29,18 +27,18 @@
   <div class="dropdown">
     <a href="produits.html" class="menu-item">Produits</a>
     <div class="dropdown-content">
-        <a href="produits-metal.html" class="TODO">Matériaux</a>
-        <a href="produits-aluminium.html" class="TODO">Couleurs</a>
-        <a href="produits-acier.html" class="TODO">Moulures</a>
-        <a href="produits-acier.html" class="TODO">Revêtements</a>
-        <a href="produits-acier.html" class="TODO">Accessoires</a>
+        <a href="produits-materiaux.html">Matériaux</a>
+        <a href="produits-couleurs.html">Couleurs</a>
+        <a href="produits-moulures.html" class="TODO">Moulures</a>
+        <a href="produits-revêtements.html">Revêtements</a>
+        <a href="produits-accessoires.html">Accessoires</a>
     </div>
   </div>
   <a href="services.html">Services</a>
   <a href="projets.html">Projets</a>
   <a href="apropos.html">À propos</a>
-  <a href="/contact" class="TODO">Contact</a>
-  <a href="/soumission" class="TODO">Soumission</a>
+  <a href="contact.html" class="TODO">Contact</a>
+  <a href="soumission.html" class="TODO">Soumission</a>
 </nav>
 
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
@@ -265,7 +263,6 @@
 <script>
   const imageElements = Array.from(document.querySelectorAll('.carousel-item'));
   let currentIndex = 0;
-
   function openLightbox(item) {
     currentIndex = imageElements.indexOf(item);
     updateLightbox();
@@ -308,7 +305,6 @@
     carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
   }
 </script>
-
 
 
 </body>
