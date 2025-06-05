@@ -255,6 +255,7 @@ hr {
 .carousel-container img {
   max-height: 450px;
   width: 650px;
+  height: 100%;
   flex: 0 0 auto;
 }
 

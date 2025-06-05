@@ -20,10 +20,10 @@
 </section>
 
 
-<section class="vbox_center" style="width:95%; padding-left: 0px; padding-right: 0px;">
+<section class="vbox_center" style="width:40%; padding-left: 0px; padding-right: 0px;">
 
   <section class="hbox_center" style="gap: 50px;">
-    <form action="#" method="post" enctype="multipart/form-data">
+    <form action="#" method="post" enctype="multipart/form-data" style="width:50%;">
 
       <section class="vbox" style="padding: 0px; gap: 15px;">
         
@@ -104,26 +104,22 @@
 
     </form>
 
-    <div style="width: 450px; height: 650px; position: relative; display: flex; overflow: hidden;">
+    <div style="overflow: hidden; object-fit: cover;">
       <img src="images/test19.jpeg"
-        style=" object-fit: cover; width: 100%;">
+        style="width: 100%; height: 600px">
     </div>
-
     
   </section>
 </section>
 
-
-
-
-  <script>
-    function checkFileCount(input) {
-      if (input.files.length > 3) {
-        alert("Vous ne pouvez importer que jusqu'à 3 fichiers.");
-        input.value = ""; // Reset
-      }
+<script>
+  function checkFileCount(input) {
+    if (input.files.length > 3) {
+      alert("Vous ne pouvez importer que jusqu'à 3 fichiers.");
+      input.value = ""; // Reset
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
