@@ -4,6 +4,7 @@ const multer = require('multer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const upload = multer({ dest: 'uploads/' }); // dossier temporaire de stockage
+require('dotenv').config();
 
 const app = express();
 const PORT = 3000;
@@ -20,8 +21,8 @@ app.post('/send', upload.array('fichiers'), async (req, res) => {
   const transporter = require('nodemailer').createTransport({
       service: 'gmail', // fonctionne aussi avec 'hotmail' mais Outlook365 est plus fiable
       auth: {
-          user: 'thomas.keita.00@gmail.com',
-          pass: 'efpj qqyl ykrw cfvs' // ou mot de passe simple si 2FA est désactivée
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       }
   });
   
