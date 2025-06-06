@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulaire</title>
+</head>
+<body>
+  <h2>Contact</h2>
+    <form action="http://localhost:3000/send" method="POST" enctype="multipart/form-data" style="width:50%;">
+
+      <section class="vbox" style="padding: 0px; gap: 15px;">
+        
+        <!-- Nom - Prenom -->
+        <section class="hbox" style=" width: 100%; gap: 10px;">
+          <section class="vbox" style="width: 200px;">
+            <label class="required" for="nom">Nom</label>
+            <input class="form-input" type="text" id="nom" name="nom" required>
+          </section>
+
+          <section class="vbox" style="width: 200px;">
+          <label class="required" for="prenom">Prénom</label>
+          <input class="form-input" type="text" id="prenom" name="prenom" required>
+          </section>
+        </section>
+        
+        <!-- Email - Telephone -->
+        <section class="hbox" style="width: 100%; gap: 10px;">
+          <section class="vbox" style="width: 200px;">
+            <label class="required" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" required>
+          </section>
+
+          <section class="vbox" style="width: 200px;">
+            <label class="required" for="telephone">Téléphone</label>
+            <input class="form-input" type="tel" id="telephone" name="telephone" required>
+          </section>
+        </section>
+        
+        <!-- Materiel - Couleur -->
+        <section class="hbox" style="width: 100%; gap: 10px;">
+          <section class="vbox" style="width: 200px;">
+            <label for="materiel">Matériel</label>
+            <input class="form-input" type="text" id="materiel" name="materiel">
+          </section>
+
+          <section class="vbox" style="width: 200px;">
+            <label for="couleur">Couleur</label>
+            <input class="form-input" type="text" id="couleur" name="couleur">
+          </section>
+        </section>
+        
+        <!-- Dimension - Épaisseur du matériel -->
+        <section class="hbox" style="width: 100%; gap: 10px;">
+          <section class="vbox" style="width: 200px;">
+            <label for="dimension">Dimension</label>
+            <input class="form-input" type="text" id="dimension" name="dimension">
+          </section>
+
+          <section class="vbox" style="width: 200px;">
+            <label for="epaisseur">Épaisseur du matériel</label>
+            <input class="form-input" type="text" id="epaisseur" name="epaisseur">
+          </section>
+        </section>
+
+        <!-- Message -->
+        <section class="hbox" style="width: 100%; gap: 10px;">
+          <section class="vbox" style="width: 410px;">
+            <label for="message">Laissez-nous un message...</label>
+            <textarea class="form-textarea" id="message" name="message" rows="5"></textarea>
+          </section>
+        </section>
+
+        <!-- Fichiers -->
+        <section class="hbox" style="width: 410px; gap: 10px;">
+          <section class="vbox" style="gap: 10px;">
+            <label for="fichiers">Importation de fichier(s) (max 3)</label>
+            <input type="file" id="fichiers" name="fichiers" 
+              multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" onchange="checkFileCount(this)">
+          </section>
+        </section>
+        <button class="button-form" type="submit" style="width: 90%;"> 
+          Envoyer
+        </button>
+
+      </section>
+
+
+    </form>
+</body>
+</html>

@@ -30,8 +30,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #2a2a2a;
+  background-color: #393939;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -59,26 +60,50 @@ h1 {
 }
 
 nav {
+  display: inline-flex;
   position: sticky;
+  width: auto;
   top: 107px; /* ou la hauteur de ton header */
   z-index: 999;
-  background-color: #333;
-  padding: 10px;
+  /* background-color: #000000; */
+  border: #1578b6 2px solid;
   text-align: center;
-}
 
-nav a {
+  /* Pour centrer horizontalement */
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+}
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  margin: 0px;
+  background-color: black;
   color: white;
-  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  height: 100%;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-item:hover {
+  color: black;
+  background-color: white; 
 }
 
-
+.nav-item-p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  height: 100%;
+}
 /*  
     Section styles for introduction text and buttons
     intro-text
@@ -430,23 +455,24 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 /* Conteneur du menu */
 .dropdown {
-  position: relative;
   display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  width: auto; /* ← prend toute la largeur */
+  height: auto;
+  height: 100%;
 }
 
 /* Menu déroulant caché par défaut */
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #333;
+  position: absolute; 
   z-index: 1000;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-
+  padding: 0px;
+  border: #1578b6 2px solid;
+  left: 70px;
 }   
 
 /* Liens dans le menu déroulant */
@@ -454,21 +480,18 @@ html {
   color: rgb(255, 255, 255);
   display: block;
   font-size: 15px;
-  padding: 6px 10px 12px 10px;
-  width: 80%;           /* ← prend toute la largeur */
+  width: 100%;           /* ← prend toute la largeur */
   box-sizing: border-box; /* ← prend en compte le padding */
 }
 
 /* Survol d'un élément du menu */
 .dropdown-content a:hover {
   color: rgb(0, 0, 0);
-  background-color: #ffffff;
 }
 
 /* Affiche le menu quand on survole le conteneur */
 .dropdown:hover .dropdown-content {
   display: block;
-  width: 150px;           /* ← prend toute la largeur */
 }
 
 .lightbox {
@@ -534,6 +557,7 @@ html {
   z-index: 2100;
   padding: 20px;
   transform: translateY(-50%);
+  gap: 0px;
 }
 
 .nav.left {
