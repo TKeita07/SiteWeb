@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/lightbox.css" />
+
+  <link rel="stylesheet" href="CSS/image_grid.css" />
 </head>
 
 
@@ -13,17 +21,22 @@
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+      
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item">Accueil</a>
@@ -31,8 +44,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -52,8 +65,6 @@
 
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
 
-
-
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox">
   <span class="close" onclick="closeLightbox()">&times;</span>
@@ -68,12 +79,12 @@
 </div>
 
 
-<section id="fournisseurs" class="vbox_center"> 
-    
-    <h1 style="font-size: 56">Nos réalisations</h1>
-
-   
-</section>
+<div class="vbox_center" style="padding-top: 40px; padding-bottom: 10px;"> 
+    <div class="titre big">
+      <p>Nos réalisations</p>
+    </div>
+  
+</div>
 
 <section class="image-grid">
   <div class="image-item" onclick="openLightbox(this)">
@@ -167,7 +178,7 @@
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -185,8 +196,8 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653"></a>418-682-8653</a></p>
+    <button onclick="document.location='contact.html'" style="padding: 10px 30px;">Nous contacter</button>
   </div>
 </section>
 
@@ -194,7 +205,7 @@
   <div class="legal-infos">
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
-    <div class="back-to-top">
+  <div class="back-to-top">
     <a href="#top">Remonter</a>
   </div>
 </section>

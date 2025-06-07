@@ -1,0 +1,105 @@
+
+/*  
+   Carousel styles
+*/
+
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: 40px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px;
+  /* Cacher la scrollbar */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* Internet Explorer 10+ */
+
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari et Edge */
+}
+
+.carousel-container img {
+  max-height: 450px;
+  width: 650px;
+  height: 100%;
+  flex: 0 0 auto;
+}
+
+.carousel-button {
+  color: rgb(0, 0, 0);
+  border: none;
+  background: none;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+.carousel-button.left {
+  position: relative;
+  left: 0px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+
+}
+
+.carousel-button.right {
+  position: relative;
+  right: 0px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+
+}
+
+.carousel-button:hover {
+    background-color: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;               /* ← très important : garde la taille fixe */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 80%;
+}
+
+.carousel-item:hover .overlay-text {
+  opacity: 1;
+}

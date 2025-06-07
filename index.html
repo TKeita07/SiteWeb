@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/lightbox.css" />
+
+  <link rel="stylesheet" href="CSS/carousel.css" />
 </head>
 
 
@@ -13,17 +21,22 @@
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+      
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item" style="background-color: white; color: #000;">Accueil</a>
@@ -31,8 +44,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -53,105 +66,6 @@
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
 
 
-
-
-
-<section id="intro" class="intro">
-  <img src="images/Photos/font accueil.png" 
-       alt="Métal noir" 
-       width="980" height="374">
-  <div class="intro-text">
-    <p>Pliage Québec est une entreprise de pliage de métal bien établie à Québec</p>
-    <p>&nbsp;</p> <!-- espace vide -->
-    <p>Spécialiste de la transformation de métal en feuille</p>
-
-    <div class="intro-button-row">
-        <button onclick="document.location='projets.html'">Voir nos réalisations</button>
-        <button onclick="document.location='contact.html'">Contactez-nous</button>
-        <button onclick="document.location='promos.html'">Surplus d'inventaire</button>
-    </div>
-  </div>
-</section>
-
-<section id="Services" class="hbox">
-    <section id="services_texts" class="vbox">    
-        <div class="some-title">
-            <a href="services.html">Services</a>
-        </div>
-        
-        <div class="some-text">
-            <p>Notre entreprise propose une gamme complète de services de pliage de métal pour les secteurs commerciaux, résidentiels et industriels. 
-                Pour que votre projet se passe dans les meilleures conditions, des accessoires sont en vente dans nos bureaux.</p>
-        </div>
-    </section>
-
-  <img src="images/Photos/Services.JPG"
-    alt="Services.JPG" 
-    width="752" height="450">
-</section>
-
-<!-- Section avec image et texte -->
-<section id="Produits" class="hbox">
-    <img src="images/Photos/Produits.JPG" 
-        alt="Forklift Certified"
-        width="577" height="450">
-
-    <section id="produits_texts" class="vbox">    
-        <div class="some-title">
-            <a href="produits.html">Produits</a>
-        </div>
-        
-        <div class="some-text">
-            <p>Du fait de notre inventaire important, nous pouvons vous fournir une variété de couleurs ou de matériels suffisamment
-                grands pour pouvoir exécuter votre projet le plus rapidement possible.</p>
-        </div>
-    </section>
-</section>
-
-<!-- Section avec image et texte -->
-<section id="Realisations" class="vbox"> 
-    <div class="some-title">
-        <a href="projets.html">Nos réalisations</a>
-    </div>
-    <div class="some-big_blue_title">
-        <p>Projets récents</p>
-    </div>
-
-        
-    
-    <div class="some-text">
-        <p>Découvrez certains des projets de pliage de métal que nous avons réalisés pour nos clients, 
-            démontrant notre expertise et notre engagement envers l'excellence.</p>
-    </div>
-</section>
-
-<section class="carousel">
-  <button class="carousel-button left" onclick="scrollCarousel(-1)">&#10094;</button>
-
-  <div class="carousel-container" id="carousel">
-    <div class="carousel-item" onclick="openLightbox(this)">
-        <img src="images/Projets/Comptoir en acier inoxydable brossé.jpeg" alt="Image 1">
-        <div class="overlay-text">C'est Polly Penny !!!</div>
-    </div>
-    <div class="carousel-item" onclick="openLightbox(this)">
-        <img src="images/Projets/Revêtement distinction métal unic.jpg" alt="Image 1">
-        <div class="overlay-text">C'est Polly Penny !!!</div>
-    </div>
-    <div class="carousel-item" onclick="openLightbox(this)">
-        <img src="images/Projets/Corniche une fois installée.jpg" alt="Image 1">
-        <div class="overlay-text">C'est Polly Penny !!!</div>
-    </div>
-
-    <div class="carousel-item" onclick="openLightbox(this)">
-        <img src="images/Projets/Toiture tôle héritage de Idéal Revêtement.jpg" alt="Image 1">
-        <div class="overlay-text">C'est Polly Penny !!!</div>
-    </div>
-
-  </div>
-
-  <button class="carousel-button right" onclick="scrollCarousel(1)">&#10095;</button>
-</section>
-
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox">
   <span class="close" onclick="closeLightbox()">&times;</span>
@@ -165,33 +79,152 @@
   <span class="nav right" onclick="changeImage(1)">&#10095;</span>
 </div>
 
+
+
+<div class="vbox_center" 
+  style="background-image: url('images/Photos/font accueil.png');
+  gap: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: auto;">
+  <div class="titre intro">
+    <p style="font-size: 35px;">Pliage Québec est une entreprise de pliage de métal bien établie à Québec</p>
+    <br>
+    <br>
+    <p style="font-size: 25px; font-weight: normal;">Spécialiste de la transformation de métal en feuille</p>
+    <p style="font-size: 25px; font-weight: normal;">Matériaux canadiens de qualité et durables</p>
+  </div>
+
+
+
+  <div class="hbox_center"
+    style="justify-content: space-evenly; max-width: 835px; width: 100%;">
+      <button onclick="document.location='projets.html'">Voir nos réalisations</button>
+      <button onclick="document.location='contact.html'">Contactez-nous</button>
+      <button onclick="document.location='promos.html'">Surplus d'inventaire</button>
+  </div>
+</div>
+ 
+<div class="vbox_center">
+  <div class="hbox_center text_image">
+    <div class="vbox"
+      style="
+        max-width: 450px;
+        min-width: 350px;">    
+        <div class="titre big">
+            <a href="services.html">Services</a>
+        </div>
+        <br>
+        <br>
+        <p>Notre entreprise propose une gamme complète de services de pliage de métal pour les secteurs commerciaux, résidentiels et industriels.</p> 
+        <p>Pour que votre projet se passe dans les meilleures conditions, des accessoires sont en vente dans nos bureaux.</p>
+  
+    </div>
+
+    <div class="image_container" style="max-width: 950px; min-width: 250px; min-height: 416px; max-height: 416px;"> 
+      <img src="images/Photos/Services.JPG">
+    </div>
+  </div>
+
+  <div class="hbox_center"
+    style="width: 90%;">
+    <div class="hbox" style="min-width: 50%; min-height: 300px;">
+      <div class="image_container" style="max-width: 750px; min-width: 250px; min-height: 416px; max-height: 416px;"> 
+        <img src="images/Photos/Produits.JPG">
+      </div>
+
+    </div>
+
+    <div class="hbox" style="width: 50%; min-height: 300px; align-items: center;">
+      <div class="vbox"
+        style="
+        max-width: 450px;
+        min-width: 350px;
+        padding-left: 50px;">    
+        <div class="titre big">
+            <a href="services.html">Produits</a>
+        </div>
+        <br>
+        <br>
+        <p>Du fait de notre inventaire important, nous pouvons vous fournir une variété de couleurs ou de matériels suffisamment
+                  grands pour pouvoir exécuter votre projet le plus rapidement possible.</p>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<br>
+<br>
+<br>
+<br>
+
 <!-- Section avec image et texte -->
-<section id="fournisseurs" class="vbox_center"> 
-    <div class="some-big_blue_title">
+  <div class="vbox"
+    style="
+    max-width: 450px;
+    min-width: 350px;
+    margin-left: 100px;">    
+    <div class="titre big">
+        <a href="projets.html">Nos réalisations</a>
+    </div>
+    <div class="blue-text">
+        <p>Projets récents</p>
+    </div>
+    <p>Découvrez certains des projets de pliage de métal que nous avons réalisés pour nos clients, 
+            démontrant notre expertise et notre engagement envers l'excellence.</p>
+  </div>
+
+
+
+<section class="carousel">
+  <button class="carousel-button left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+  <div class="carousel-container" id="carousel">
+    <div class="carousel-item" onclick="openLightbox(this)">
+        <img src="images/Projets/Comptoir en acier inoxydable brossé.jpeg" alt="Image 1">
+        <div class="overlay-text">Comptoir acier inoxydable brossé</div>
+    </div>
+    <div class="carousel-item" onclick="openLightbox(this)">
+        <img src="images/Projets/Revêtement distinction métal unic.jpg" alt="Image 1">
+        <div class="overlay-text">Revêtement distinction métal unic</div>
+    </div>
+    <div class="carousel-item" onclick="openLightbox(this)">
+        <img src="images/Projets/Corniche une fois installée.jpg" alt="Image 1">
+        <div class="overlay-text">Corniche installée</div>
+    </div>
+
+    <div class="carousel-item" onclick="openLightbox(this)">
+        <img src="images/Projets/Toiture tôle héritage de Idéal Revêtement.jpg" alt="Image 1">
+        <div class="overlay-text">Toiture tôle héritage de Idéal Revêtement</div>
+    </div>
+
+  </div>
+
+  <button class="carousel-button right" onclick="scrollCarousel(1)">&#10095;</button>
+</section>
+
+
+<!-- Section avec image et texte -->
+<div class="vbox_center"> 
+    <div class="blue-text">
         <p>Nos fournisseurs</p>
     </div>
 
-    <section id="img_fournisseur" class="hbox">
+    <div class="hbox" style="justify-content: space-between; width: 50%;">
         <div style=" object-fit: cover; overflow: hidden; width: 250px;  height: 125px; display: flex; align-items: center;">
           <img src="images/Fournisseurs/ideal_revetement.jpg" 
               alt="Polly"
               style=" width: 100%;">
         </div>
         
-        <p>&nbsp;</p> <!-- espace vide -->
-        <p>&nbsp;</p> <!-- espace vide -->
-        <p>&nbsp;</p> <!-- espace vide -->
-        <p>&nbsp;</p> <!-- espace vide -->
-        <p>&nbsp;</p> <!-- espace vide -->
-        <p>&nbsp;</p> <!-- espace vide -->
-        <p>&nbsp;</p> <!-- espace vide -->
-        <div style=" object-fit: cover; overflow: hidden; width: 250px;  height: 125px; display: flex; align-items: center;">
+        <div style="object-fit: cover; overflow: hidden; width: 250px;  height: 125px; display: flex; align-items: center;">
           <img src="images/Fournisseurs/gentek.jpg" 
               alt="Polly"
               style=" width: 100%;">
         </div>
-    </section>
-</section>
+      </div>
+      <br>
+    </div>
 
 
 <!--------------------------------------------------- Debut du Footer --------------------------------------------------->
@@ -199,7 +232,7 @@
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -217,8 +250,8 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653"></a>418-682-8653</a></p>
+    <button onclick="document.location='contact.html'" style="padding: 10px 30px;">Nous contacter</button>
   </div>
 </section>
 
@@ -226,7 +259,7 @@
   <div class="legal-infos">
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
-    <div class="back-to-top">
+  <div class="back-to-top">
     <a href="#top">Remonter</a>
   </div>
 </section>
@@ -292,6 +325,9 @@
     carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
   }
 </script>
+
+
+
 
 
 </body>

@@ -1,27 +1,42 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/lightbox.css" />
+
+  <link rel="stylesheet" href="CSS/color_show.css" />
 </head>
+
 
 <!--------------------------------------------------- Debut du Header --------------------------------------------------->
 
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+      
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item">Accueil</a>
@@ -29,8 +44,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item" style="background-color: white; color: #000;">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item" style="background-color: white; color: #000;">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item" style="background-color: white; color: #000;">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -71,27 +86,33 @@
 
 
 
-<section class="vbox_center" style="width:95%;">
-    <h1 style="width:65%; padding-left: 26px; gap: 0px; align-items: flex-start;">Couleurs</h1>
+<section class="vbox_center" style="padding: 50px 30px;"> 
+  <section class="vbox_center" style="width:70%; gap: 15px; align-items: flex-start; min-width: 850px;">
+      <h2>Couleurs</h2>
 
-  <section class="vbox_center" style="width:65%; padding-left: 15px; gap: 0px; align-items: flex-start;"> 
-    <p>Le choix de la couleur est un moment primordial dans la conception de votre projet. Voici de quoi vous aider à le faire avec nos couleurs d’acier et d’aluminium..</p>
-    <p style="font-weight: bold;">Attention en fonction de la luminosité ou autre problème, la couleur peut différer de la couleur réelle.</p>
-    <p style="font-weight: bold;">Pour plus de précision veuillez passer à nos bureaux.</p>
-  </section>
-
-
-
-  <section class="vbox_center" style="width:65%; padding-left: 15px; gap: 15px; align-items: flex-start;"> 
-    <h1>Acier</h1>
-    <section class="hbox" style="width:100%; padding: 0px; gap: 0px; align-items: flex-start;"> 
-      <p>
-        Idéal est une entreprise canadienne avec plus de 90 ans d’expérience dans le domaine. 
-        Elle offre une possibilité de couleur la plus variée et la plus durable car leur 7 couches de peinture et de protection est une défense supplémentaire 
-        pour l’acier.
-      </p>
-      <img src="images/Fournisseurs/ideal_revetement.jpg" style="object-fit: cover; height: 90px; width: 600px;"/>
+    <section class="vbox"> 
+      <p>Le choix de la couleur est un moment primordial dans la conception de votre projet. Voici de quoi vous aider à le faire avec nos couleurs d’acier et d’aluminium..</p>
+      <p style="font-weight: bold;">Attention en fonction de la luminosité ou autre problème, la couleur peut différer de la couleur réelle.</p>
+      <p style="font-weight: bold;">Pour plus de précision veuillez passer à nos bureaux.</p>
     </section>
+    <br>
+    <section class="vbox"> 
+      <h1>Acier</h1>
+      <section class="hbox" style="width:100%; gap: 30px;"> 
+        <p>
+          Idéal est une entreprise canadienne avec plus de 90 ans d’expérience dans le domaine. 
+          Elle offre une possibilité de couleur la plus variée et la plus durable car leur 7 couches de peinture et de protection est une défense supplémentaire 
+          pour l’acier.
+        </p>
+        <div class="image_container" style="height: 100px; width: 650px;">
+          <img src="images/Fournisseurs/ideal_revetement.jpg" />
+        </div>
+        <!-- <div class="image_container" style="height: 50px; width: 650px;">
+          <img src="images//Revêtements/Ideal_revêtement-removebg-preview.png" />
+        </div> -->
+      </section>
+    </section>
+    <br>
   </section>
 
   <section class="color-grid">
@@ -234,15 +255,22 @@
 </section>
 
 
-<section class="vbox_center" style="width:95%;">
-  <section class="vbox_center" style="width:65%; padding-left: 15px; gap: 15px; align-items: flex-start;"> 
+
+<section class="vbox_center" style="padding: 30px 30px;"> 
+  <section class="vbox_center" style="width:70%; gap: 15px; align-items: flex-start; min-width: 850px;">
     <h1>Aluminium</h1>
-    <section class="hbox" style="width:100%; padding: 0px; gap: 0px; align-items: flex-start;"> 
+    <section class="hbox" style="width:100%; gap: 30px;"> 
       <p> Gentek est une entreprise canadienne ouverte depuis plus de 50 ans qui se sert de produits canadiens. 
           Elle est le meilleur choix pour nous car l’aluminium en rouleau est le plus épais du marché mais aussi parce qu’elle dispose du plus grand choix de couleurs.
       </p>
-      <img src="images/Fournisseurs/gentek.jpg" style="object-fit: cover; height: 100px; width: 600px;"/>
+        <div class="image_container" style="height: 100px; width: 650px;">
+          <img src="images/Fournisseurs/gentek.jpg" />
+        </div>
+        <!-- <div class="image_container" style="height: 100px; width: 650px;">
+          <img src="images/Revêtements/Gentek-removebg-preview.png" />
+        </div> -->
     </section>
+    <br>
   </section>
   
 <section class="color-grid">
@@ -966,7 +994,7 @@
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -984,8 +1012,8 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653"></a>418-682-8653</a></p>
+    <button onclick="document.location='contact.html'" style="padding: 10px 30px;">Nous contacter</button>
   </div>
 </section>
 
@@ -993,7 +1021,7 @@
   <div class="legal-infos">
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
-    <div class="back-to-top">
+  <div class="back-to-top">
     <a href="#top">Remonter</a>
   </div>
 </section>

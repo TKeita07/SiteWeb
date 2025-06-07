@@ -4,25 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/lightbox.css" />
+
+  <link rel="stylesheet" href="CSS/gridshow.css" />
 </head>
+
 
 <!--------------------------------------------------- Debut du Header --------------------------------------------------->
 
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+      
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item">Accueil</a>
@@ -30,8 +44,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item" style="background-color: white; color: #000;">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item" style="background-color: white; color: #000;">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item" style="background-color: white; color: #000;">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -66,15 +80,16 @@
 </div>
 
 
-<section class="vbox_center" style="width:85%; padding-left: 0px; padding-right: 0px;">
-  <section class="vbox_center" style="width:75%; padding-left: 0px; gap: 15px; align-items: flex-start; min-width: 850px;"> 
-    <h1>Matériaux</h1>
-    <div class="simple-text">Nous vous offrons un très large choix de matériaux allant du 26 Gages jusqu’à 1/16 d’épaisseur pour que vous puissiez réaliser le plus grand nombre de projets que vous souhaitez.</div>
-    <div class="simple-text">Nos matières premières viennent de moulins canadiens.</div>
-    <div class="simple-text">L'acier émaillé et l'aluminium Gentek sont disponibles en plusieurs couleurs. Voir 
-      <a href="produits-couleurs.html" style="color: black;">ici</a> nos couleurs.</div>
+<section class="vbox_center" style="padding: 50px 30px;">
+  <section class="vbox_center" style="width:70%; gap: 15px; align-items: flex-start; min-width: 850px;"> 
+    <h2>Matériaux</h2>
+    <p>Nous vous offrons un très large choix de matériaux allant du 26 Gages jusqu’à 1/16 d’épaisseur pour que vous puissiez réaliser le plus grand nombre de projets que vous souhaitez.</p>
+    <p>Nos matières premières viennent de moulins canadiens.</p>
+    <p>L'acier émaillé et l'aluminium Gentek sont disponibles en plusieurs couleurs. Voir 
+      <a href="produits-couleurs.html" style="color: black;">ici</a> nos couleurs.</p>
   </section>
-
+  <br>
+  <br>
   <section class="image-gridshow">
     
     <section class="gid-box"
@@ -83,7 +98,7 @@
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Acier galvalume du 26 au 22 GA.JPG"/>
       </div>
-      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+      <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Acier galvalume du 26 au 22 GA</p>
       </section>
@@ -95,7 +110,7 @@
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Acier galvanisé du 26 au 18 GA.JPG"/>
       </div>
-      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+      <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Acier galvanisé du 26 au 18 GA</p>
       </section>
@@ -103,13 +118,15 @@
     </section>
     
     <section class="gid-box"
-    style="padding: 0px 0px 20px 0px; gap: 30px;">
+      style="padding: 0px 0px 20px 0px; gap: 30px;">
 
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Aluminium Gentek robuste Épaisseur 0.022 pouce.JPG"/>
       </div>
-      <h1></h1>
-      <p>Aluminium Gentek robuste Épaisseur 0.022 pouce</p>
+      <section class="vbox_center gridshow_caption"> 
+        <h1></h1>
+        <p>Aluminium Gentek robuste Épaisseur 0.022 pouce</p>
+      </section>
     </section>
     
     <section class="gid-box"
@@ -118,7 +135,7 @@
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Stucco ou aluminium embossé 0.040 pouce.JPG"/>
       </div>
-      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+      <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Stucco ou aluminium embossé 0.040 pouce</p>
       </section>
@@ -130,7 +147,7 @@
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Acier inoxydable brossé 22 GA 304-4.JPG"/>
       </div>
-      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+      <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Acier inoxydable brossé 22 GA 304-4</p>
       </section>
@@ -142,7 +159,7 @@
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Acier émaillé du 26 au 22 GA.JPG"/>
       </div>
-      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+      <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Acier émaillé du 26 au 22 GA</p>
       </section>
@@ -154,7 +171,7 @@
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Antirongeur acier galvanisé perforé 51per 22 GA.JPG"/>
       </div>
-      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+      <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Antirongeur acier galvanisé perforé 51% 22 GA</p>
       </section>
@@ -166,7 +183,7 @@
       <div class="image-gridshow-item" onclick="openLightbox(this)">
         <img src="images/Matériaux/Checketplate Épaisseur 1-16.JPG"/>
       </div>
-      <section class="vbox_center" style="padding: 0px; gap: 20px;"> 
+      <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Checketplate Épaisseur 1-16</p>
       </section>
@@ -183,7 +200,7 @@
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -201,8 +218,8 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653"></a>418-682-8653</a></p>
+    <button onclick="document.location='contact.html'" style="padding: 10px 30px;">Nous contacter</button>
   </div>
 </section>
 
@@ -210,7 +227,7 @@
   <div class="legal-infos">
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
-    <div class="back-to-top">
+  <div class="back-to-top">
     <a href="#top">Remonter</a>
   </div>
 </section>

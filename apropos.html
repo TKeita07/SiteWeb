@@ -4,25 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/lightbox.css" />
+
 </head>
+
 
 <!--------------------------------------------------- Debut du Header --------------------------------------------------->
 
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+      
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item">Accueil</a>
@@ -30,8 +43,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -53,76 +66,65 @@
 
 
 <!-- Section avec image et texte -->
-<section id="Services" class="vbox" style="gap: 0px; padding: 150px 50px 50px 150px;">
-    <h1>À propos de nous</h1>
-    
-    <div class="some-big_blue_title">
+<div class="vbox" style="gap: 0px; padding: 75px 50px 50px 150px;">
+    <div class="big">
+        <p>À propos de nous</p>
+    </div>
+    <div class="blue-text">
         <p>Nous plions pour vous</p>
     </div>
-</section>
+</div>
 
-<section id="services_texts" class="vbox_center">    
+<div class="vbox_center">    
     <img src="images/Photos/Apropos.png"
         alt="Services.JPG" 
         width="1000" height="550">
-</section>
+</div>
 
-<section id="propos0" class="hbox" style="gap: 250px; padding: 150px 50px 50px 150px;">
-    <section id="propos1" class="vbox" style="width: 25%">
-        <h1>Pliage Québec, une entreprise de pliage de métal bien établie à Québec.</h1>
-          
-        <div class="some-text">
-            <p>Depuis 2014, le service est notre priorité N°1. Dans une ère où tout va vite, nous savons être efficaces et nous respectons les délais de livraison. Nous utilisons des matériaux canadiens de qualité et durables.</p>
-        </div>
-    </section>
+<div class="hbox" style="gap: 250px; padding: 150px 50px 50px 150px;">
+    <div class="vbox" style="width: 25%">
+        <h2>Pliage Québec, une entreprise de pliage de métal bien établie à Québec.</h2>
+        <br>
+        <p>Depuis 2014, le service est notre priorité N°1. Dans une ère où tout va vite, nous savons être efficaces et nous respectons les délais de livraison. Nous utilisons des matériaux canadiens de qualité et durables.</p>
+    </div>
 
     
-    <section id="team" class="vbox" style="width: 33%">
-        <section id="team0" class="vbox">
+    <div class="vbox" style="width: 26%">
+        <div class="vbox" style="gap: 10px; padding-bottom: 20px;">
             <div class="custom-hr"></div>
-            <h1 style="font-size: 22px;">Equipe</h1>
-            
-            <div class="some-text">
-                <p>Notre équipe de passionnés est là pour vous offrir un service de qualité.</p>
-            </div>
-        </section>
+            <h2>Equipe</h2>
+            <p>Notre équipe de passionnés est là pour vous offrir un service de qualité.</p>
+        </div>
 
-        <section id="team1" class="vbox" style="gap: 2">
+        <div class="vbox" style="gap: 10px; padding-bottom: 20px;">
             <h1>Philippe</h1>
-            
-            <div class="some-text">
-                <p>Notre entreprise a vu le jour en 2014 grâce à Philippe, un artisan ferblantier originaire de France, passionné par son métier et animé par l’envie de transmettre son savoir-faire. Après plusieurs années d’expérience en tant qu’artisan dans son pays d’origine, Philippe a décidé de s’installer à Québec pour ouvrir son propre atelier, alliant tradition et innovation dans le domaine de la ferblanterie.​</p>
-            </div>
-        </section>
+            <p>Notre entreprise a vu le jour en 2014 grâce à Philippe, un artisan ferblantier originaire de France, passionné par son métier et animé par l’envie de transmettre son savoir-faire. Après plusieurs années d’expérience en tant qu’artisan dans son pays d’origine, Philippe a décidé de s’installer à Québec pour ouvrir son propre atelier, alliant tradition et innovation dans le domaine de la ferblanterie.​</p>
 
-        <section id="team2" class="vbox">
+        </div>
+
+        <div class="vbox" style="gap: 10px; padding-bottom: 20px;">
             <h1>Roxanne</h1>
-            
-            <div class="some-text">
-                <p>En 2019, Roxanne, alors infirmière, rejoint l’entreprise en tant que copropriétaire. Forte de son expertise en gestion, en comptabilité et en vente, Roxanne a su apporter une nouvelle dynamique à l’entreprise, en optimisant les processus administratifs et en développant des stratégies efficaces pour assurer une croissance durable.</p>
-            </div>
-        </section>
+            <p>En 2019, Roxanne, alors infirmière, rejoint l’entreprise en tant que copropriétaire. Forte de son expertise en gestion, en comptabilité et en vente, Roxanne a su apporter une nouvelle dynamique à l’entreprise, en optimisant les processus administratifs et en développant des stratégies efficaces pour assurer une croissance durable.</p>
 
-        <section id="team3" class="vbox">
+        </div>
+
+        <div class="vbox" style="gap: 10px; padding-bottom: 20px;">
             <h1>Luca</h1>
-            
-            <div class="some-text">
-                <p>Luca, quant à lui, a rejoint l’équipe au poste de pliage. Grâce à sa détermination et aux nombreuses formations spécialisées qu’il a suivies, il a rapidement acquis une confiance inébranlable dans ses compétences. Luca est reconnu pour son expertise en pliage, réalisant des travaux de précision et de qualité qui répondent aux plus hauts standards de l’industrie.</p>
-            </div>
-        </section>
+            <p>Luca, quant à lui, a rejoint l’équipe au poste de pliage. Grâce à sa détermination et aux nombreuses formations spécialisées qu’il a suivies, il a rapidement acquis une confiance inébranlable dans ses compétences. Luca est reconnu pour son expertise en pliage, réalisant des travaux de précision et de qualité qui répondent aux plus hauts standards de l’industrie.</p>
 
-        <section id="team4" class="vbox">
+        </div>
+
+        <div class="vbox" style="gap: 10px; padding-bottom: 20px;">
             
             <div class="custom-hr"></div>
             <h1>Expérience</h1>
-            
-            <div class="some-text">
-                <p>L’équipe est unie par une même passion du travail bien fait et un engagement constant à offrir un service impeccable à ses clients. Grâce à l’expérience et à l’expertise de chaque membre, notre entreprise continue de croître et d’évoluer, avec pour objectif d’offrir des solutions novatrices et de qualité dans le domaine de la ferblanterie.</p>
-            </div>
-        </section>
 
-    </section>
-</section>
+            <p>L’équipe est unie par une même passion du travail bien fait et un engagement constant à offrir un service impeccable à ses clients. Grâce à l’expérience et à l’expertise de chaque membre, notre entreprise continue de croître et d’évoluer, avec pour objectif d’offrir des solutions novatrices et de qualité dans le domaine de la ferblanterie.</p>
+
+        </div>
+
+    </div>
+</div>
 
 
 <!--------------------------------------------------- Debut du Footer --------------------------------------------------->
@@ -130,7 +132,7 @@
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -148,8 +150,8 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653"></a>418-682-8653</a></p>
+    <button onclick="document.location='contact.html'" style="padding: 10px 30px;">Nous contacter</button>
   </div>
 </section>
 
@@ -157,7 +159,7 @@
   <div class="legal-infos">
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
-    <div class="back-to-top">
+  <div class="back-to-top">
     <a href="#top">Remonter</a>
   </div>
 </section>

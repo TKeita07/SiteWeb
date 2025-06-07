@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
 </head>
 
 
@@ -13,17 +17,22 @@
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item">Accueil</a>
@@ -31,8 +40,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -53,71 +62,68 @@
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
 
 
-<section id="intro" class="intro">
+<div class="image_container"
+style="
+  width: 100%;
+  height: 374px;">
   <img src="images/Photos/Contact.JPG" 
        alt="Contact">
-</section>
+</div>
 
-<section class="vbox_center" style="width:85%; padding-left: 0px; padding-right: 0px;">
-  <h1 style="font-size: 69px;">Nous contacter</h1>
+<div class="vbox_center" style="width:100%; padding-top: 30px;">
+  <h3 style="font-size: 52px;">Nous contacter</h3>
   <br>
-  <section class="hbox_center" style="gap: 150px; align-items: start;">
+  <div class="hbox_center" style="gap: 150px; align-items: start;">
     
-    <section class="vbox" style="gap: 0px;">
-      <h3 style="font-size: 26px; color: #3D9BE9;">Adresse</h3>
+    <div class="vbox" style="min-width: 240px;">
+      <h3 style="font-size: 26px; color: #1578b6;">Adresse</h3>
       <br>
       <p style="font-size: 16px; line-height: 1.8em;">1023 rue Rivard</p>
       <p style="font-size: 16px; line-height: 1.8em;">Québec, Qc, G1M 3G8</p>
 
-    </section>
+    </div>
 
-    <section class="vbox">
-      <h3 style="font-size: 26px; color: #3D9BE9;">Contact</h3>
+    <div class="vbox">
+      <h3 style="font-size: 26px; color: #1578b6;">Contact</h3>
       <br>
-      <section class="vbox" style="gap: 10px;">
+      <div class="vbox" style="gap: 10px;">
 
         <p style="font-size: 16px; line-height: 1.8em;">
           <a href="tel:14186828653" style="text-decoration: underline; color: inherit;">418-682-8653</a><br>
           <a href="mailto:info@pliagequebec.com" style="text-decoration: underline; color: inherit;">info@pliagequebec.com</a>
         </p>
         <br>
-        <p>
-          <a href="soumission.html" target="_blank"
-            style="display: inline-block;
-            padding: 25px 35px;
-            background-color: #3D9BE9;
-            color: white;
-            text-decoration: none; border-radius: 5px;">
-            Soumission
-          </a>
-        </p>
-      </section>
-    </section>
+        <br>
+        <button style="padding: 15px 50px;" onclick="document.location='soumission.html'">Soumission</button>
 
-    <section class="vbox">
-      <h3 style="font-size: 26px; color: #3D9BE9;">Heures d'ouverture</h3>
+      </div>
+    </div>
+
+    <div class="vbox" style="min-width: 240px; width: 100%;">
+      <h3 style="font-size: 26px; color: #1578b6;">Heures d'ouverture</h3>
       <br>
-      <section class="hbox" style="width: 100%; height: 100%; padding: 0px; gap: 0px;">
-        <section class="vbox" style="width: 100%; height: 100%; gap: 15px;">
+      <div class="hbox" style="width: 100%; height: 100%; padding: 0px; gap: 0px;">
+        <div class="vbox" style="width: 100%; height: 100%; gap: 15px;">
           <p>Lun. - Jeu.</p>
           <p>Ven.</p>
           <p>&nbsp;</p>
           <p>Samedi</p>
           <p>Dimanche</p>
-        </section>
-        <section class="vbox" style="width: 100%; height: 100%; gap: 15px;">
+        </div>
+        <div class="vbox" style="width: 100%; height: 100%; gap: 15px;">
           <p>7 h 30 - 16 h 30</p>
           <p>7 h 30 - 12 h</p>
           <p>13 h - 16 h 30</p>
           <p>Fermé</p>
           <p>Fermé</p>
-        </section>
-      </section>
-    </section>
-  </section>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-
+  <br>
+  <br>
 
   <!-- Google Map -->
   <iframe class="map"
@@ -131,7 +137,7 @@
   </iframe>
 
 
-</section>
+</div>
 
 
 
@@ -140,7 +146,7 @@
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -158,8 +164,8 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653"></a>418-682-8653</a></p>
+    <button onclick="document.location='contact.html'" style="padding: 10px 30px;">Nous contacter</button>
   </div>
 </section>
 
@@ -167,7 +173,7 @@
   <div class="legal-infos">
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
-    <div class="back-to-top">
+  <div class="back-to-top">
     <a href="#top">Remonter</a>
   </div>
 </section>

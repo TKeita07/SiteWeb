@@ -1,0 +1,56 @@
+.image-gridshow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 25px;
+  max-width: 70%;
+  margin: auto;
+  padding: 0;
+  min-width: 300px;
+}
+
+/* Conteneur de chaque image + texte */
+.gid-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 0 auto;
+  padding: 40px;
+  color: black;
+}
+
+.image-gridshow-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* défaut: carré */
+  overflow: hidden;
+  box-shadow: #00000056 0px 0px 10px 0px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gridshow-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  object-position: center;
+}
+
+.image-gridshow-text {
+  font-size: 18px;
+}
+
+.gid-box:hover .image-gridshow-item {
+  transform: scale(0.90);
+}
+
+.gridshow_caption {
+  gap: 10px;
+  text-align: center;
+}
+
+

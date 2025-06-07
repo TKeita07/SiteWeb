@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/form.css" />
 </head>
 
 
@@ -13,17 +19,22 @@
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+      
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item">Accueil</a>
@@ -31,8 +42,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -54,21 +65,20 @@
 
 
 
-<section class="vbox" style="gap: 15px; padding: 150px 50px 50px 150px;">
-  <h1>Nous joindre</h1>
+<div class="vbox" style="width: 750px; padding: 50px 50px 50px 100px;">
+  <h2>Nous joindre</h2>
   
-  <div class="some-big_blue_title">
+  <div class="blue-text">
       <p>Demande de soumission</p>
   </div>
 
-  <p>N'hésitez pas à nous faire parvenir une demande de soumission en utilisant le</p>
-  <p>formulaire ci-dessous ou en appelant au 418-682-8653</p>
-</section>
+  <p>N'hésitez pas à nous faire parvenir une demande de soumission en utilisant le formulaire ci-dessous ou en appelant au 418-682-8653</p>
+</div>
 
 
-<section target="_blank" class="vbox_center" style="width:40%; padding-left: 0px; padding-right: 0px;">
+<div class="vbox_center" style="padding-left: 0px; padding-right: 0px;">
 
-  <section class="hbox_center" style="gap: 150px;">
+  <div class="hbox_center" style="gap: 0px;">
     <form action="https://formsubmit.co/thomas.keita@hotmail.com" method="POST" enctype="multipart/form-data" style="width:50%;">
 
       <!-- Champs cachés pour configurer FormSubmita -->
@@ -78,81 +88,82 @@
       <!-- <input type="hidden" name="_captcha" value="false"> -->
 
 
-      <section class="vbox" style="padding: 0px; gap: 15px;">
+      <div class="vbox" style="padding: 0px; gap: 15px;">
         
         <!-- Nom - Prenom -->
-        <section class="hbox" style=" width: 100%; gap: 10px;">
-          <section class="vbox" style="width: 200px;">
+        <div class="hbox" style=" width: 100%; gap: 10px;">
+          <div class="vbox" style="width: 200px;">
             <label class="required" for="nom">Nom</label>
-            <input class="form-input" type="text" id="nom" name="nom" value="lllllll" required>
-          </section>
+            <input class="form-input" type="text" id="nom" name="nom" required>
+          </div>
 
-          <section class="vbox" style="width: 200px;">
+          <div class="vbox" style="width: 200px;">
           <label class="required" for="prenom">Prénom</label>
-          <input class="form-input" type="text" id="prenom" name="prenom" value="prenom" required>
-          </section>
-        </section>
+          <input class="form-input" type="text" id="prenom" name="prenom" required>
+          </div>
+        </div>
         
         <!-- Email - Telephone -->
-        <section class="hbox" style="width: 100%; gap: 10px;">
-          <section class="vbox" style="width: 200px;">
+        <div class="hbox" style="width: 100%; gap: 10px;">
+          <div class="vbox" style="width: 200px;">
             <label class="required" for="email">Email</label>
-            <input class="form-input" type="email" id="email" name="email" value="monkeytotok07@gmail.com" required>
-          </section>
+            <input class="form-input" type="email" id="email" name="email" required>
+          </div>
 
-          <section class="vbox" style="width: 200px;">
+          <div class="vbox" style="width: 200px;">
             <label class="required" for="telephone">Téléphone</label>
-            <input class="form-input" type="tel" id="telephone" name="telephone" value="321231" required>
-          </section>
-        </section>
+            <input class="form-input" type="tel" id="telephone" name="telephone" required>
+          </div>
+        </div>
         
         <!-- Materiel - Couleur -->
-        <section class="hbox" style="width: 100%; gap: 10px;">
-          <section class="vbox" style="width: 200px;">
+        <div class="hbox" style="width: 100%; gap: 10px;">
+          <div class="vbox" style="width: 200px;">
             <label for="materiel">Matériel</label>
             <input class="form-input" type="text" id="materiel" name="materiel">
-          </section>
+          </div>
 
-          <section class="vbox" style="width: 200px;">
+          <div class="vbox" style="width: 200px;">
             <label for="couleur">Couleur</label>
             <input class="form-input" type="text" id="couleur" name="couleur">
-          </section>
-        </section>
+          </div>
+        </div>
         
         <!-- Dimension - Épaisseur du matériel -->
-        <section class="hbox" style="width: 100%; gap: 10px;">
-          <section class="vbox" style="width: 200px;">
+        <div class="hbox" style="width: 100%; gap: 10px;">
+          <div class="vbox" style="width: 200px;">
             <label for="dimension">Dimension</label>
             <input class="form-input" type="text" id="dimension" name="dimension">
-          </section>
+          </div>
 
-          <section class="vbox" style="width: 200px;">
+          <div class="vbox" style="width: 200px;">
             <label for="epaisseur">Épaisseur du matériel</label>
             <input class="form-input" type="text" id="epaisseur" name="epaisseur">
-          </section>
-        </section>
+          </div>
+        </div>
 
         <!-- Message -->
-        <section class="hbox" style="width: 100%; gap: 10px;">
-          <section class="vbox" style="width: 410px;">
+        <div class="hbox" style="width: 100%; gap: 10px;">
+          <div class="vbox" style="width: 410px;">
             <label for="message">Laissez-nous un message...</label>
             <textarea class="form-textarea" id="message" name="message" rows="5"></textarea>
-          </section>
-        </section>
+          </div>
+        </div>
 
         <!-- Fichiers -->
-        <section class="hbox" style="width: 410px; gap: 10px;">
-          <section class="vbox" style="gap: 10px;">
+        <div class="hbox" style="width: 410px; gap: 10px;">
+          <div class="vbox" style="gap: 10px;">
             <label for="fichiers">Importation de fichier(s) (max 3)</label>
             <input type="file" id="fichiers" name="fichiers" 
               multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" onchange="checkFileCount(this)">
-          </section>
-        </section>
+          </div>
+        </div>
+        
         <button class="button-form" type="submit" style="width: 90%;"> 
           Envoyer
         </button>
 
-      </section>
+      </div>
 
 
     </form>
@@ -162,8 +173,8 @@
         style="width: 100%; min-width: 450px; height: 600px">
     </div>
     
-  </section>
-</section>
+  </div>
+</div>
 
 
 <script>
@@ -200,7 +211,7 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653">418-682-8653</a></p>
     <a href="contact.html" class="contact-button">Nous contacter</a>
   </div>
 </section>

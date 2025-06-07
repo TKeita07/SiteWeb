@@ -1,116 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Pliage Québec</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html{
+      background-color: aquamarine;
+      width: inherit; /* ✅ Largeur fixe pour forcer le scroll horizontal */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      width: inherit;
+    }
+
+    /* ✅ Pas de width fixe ici */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      flex-wrap: wrap;
+      width: inherit;
+    }
+
+    .logo img {
+      max-height: 84px;
+    }
+
+    .contact-info {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .contact-info a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      background-color: #444;
+    }
+
+    nav li {
+      margin: 5px 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .contact-info {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
+<body>
 
+  <!-- ✅ Contenu qui force une grande largeur -->
+  <div style="width: 2000px; height: 0;"></div>
 
-<!--------------------------------------------------- Debut du Header --------------------------------------------------->
-
-<body id="top">
-
-<header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
+  <!-- ✅ Le header va maintenant suivre cette largeur -->
+  <header>
     <div class="logo">
-      <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
+      <img src="https://static.wixstatic.com/media/54c4a1_61b8976752374883a1e98cb0599bb82a~mv2.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="contact-info">
+      <p><a href="tel:14186828653">418-682-8653</a></p>
+      <p><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></p>
+      <p>1023 rue Rivard<br>Québec, Qc, G1M3G8</p>
     </div>
+  </header>
 
-  </section>
-    
   <nav>
-    <a href="index.html" class="nav-item">Accueil</a>
-    <div class="nav-item-p">
-      <div class="dropdown ">
-        <a href="produits.html" class="nav-item">Produits</a>
-        <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
-              <a href="produits-moulures.html" class="nav-item">Moulures</a>
-              <a href="produits-revetements.html" class="nav-item">Revêtements</a>
-              <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
-        </div>
-      </div>
-    </div>
-
-    <a href="services.html" class="nav-item">Services</a>
-    <a href="projets.html" class="nav-item">Projets</a>
-    <a href="apropos.html" class="nav-item">À propos</a>
-    <a href="contact.html" class="nav-item">Contact</a>
-    <a href="soumission.html" class="nav-item">Soumission</a>
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Produits</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projets</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Soumission</a></li>
+    </ul>
   </nav>
-</header>
 
-
-
-<!--------------------------------------------------- Fin du Header --------------------------------------------------->
-
-
-<form id="form">
-  <input type="text" name="name" required  value="Jean Dupont"/>
-  <input type="email" name="email" required  value="Monkeytotok07@gmail.com"/>
-  <textarea name="message" required  value="Message cvool"></textarea>
-  <input type="file" name="file" />
-  <button type="submit">Envoyer</button>
-</form>
-
-<!--------------------------------------------------- Debut du Footer --------------------------------------------------->
-<hr><!-- Footer -->
-
-<section class="footer">
-  <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+  <!-- Large contenu test -->
+  <div style="width: 2000px; height: 200px; background-color: #ccc; margin: 50px auto;">
+    Ceci est un contenu large qui force un scroll horizontal.
   </div>
 
-  <div class="footer-column">
-    <h1 style="color:rgb(0, 0, 0);">Siège social</h1>
-    <p>1023 rue Rivard</p>
-    <p>Québec, Qc, G1M3G8</p>
-    <p><a href="tel:14186828653">418-682-8653</a></p>
-    <p><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></p>
-  </div>
-
-  <div class="footer-column">
-    <h1 style="color:rgb(0, 0, 0);">Réseaux sociaux</h1>
-    <p><a href="https://www.facebook.com/pliagequebec" target="_blank">Facebook</a></p>
-  </div>
-
-  <div class="footer-column">
-    <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
-  </div>
-</section>
-
-<section class="legal-footer">
-  <div class="legal-infos">
-    <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
-  </div>
-    <div class="back-to-top">
-    <a href="#top">Remonter</a>
-  </div>
-</section>
-
-<script>
-  const futureLinks = document.querySelectorAll('.TODO');
-  futureLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      // Simule une page indisponible
-      window.location.href = 'todo.html';
-    });
-  });
-</script>
-
-<!--------------------------------------------------- Fin du Footer --------------------------------------------------->
-
-<!---------------------- Scripts -------------------------->
 </body>
 </html>

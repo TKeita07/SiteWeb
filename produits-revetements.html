@@ -4,25 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pliage Québec</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/lightbox.css" />
+
+  <link rel="stylesheet" href="CSS/carousel.css" />
 </head>
+
 
 <!--------------------------------------------------- Debut du Header --------------------------------------------------->
 
 <body id="top">
 
 <header>
-  <section class="hbox" style="width: 50%; justify-content: space-between;">
-    <div class="logo">
+  <div class="hbox header">
+    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="contact">
-      <div><a href="tel:14186828653">418-682-8653</a></div>
-      <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
-      <div>1023 rue Rivard, Québec, QC G1M 3G8</div>logo
+    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox" style="gap: 15px; align-items: end;">
+        <div><a href="tel:14186828653">418-682-8653</a></div>
+        <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
+      </div>
+      <div style="width: 120px;">
+        <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
+      </div>
+      
     </div>
 
-  </section>
+  </div>
     
   <nav>
     <a href="index.html" class="nav-item">Accueil</a>
@@ -30,8 +44,8 @@
       <div class="dropdown ">
         <a href="produits.html" class="nav-item" style="background-color: white; color: #000;">Produits</a>
         <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Couleurs</a>
-              <a href="produits-couleurs.html" class="nav-item">Matériaux</a>
+              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
+              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
               <a href="produits-moulures.html" class="nav-item">Moulures</a>
               <a href="produits-revetements.html" class="nav-item" style="background-color: white; color: #000;">Revêtements</a>
               <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
@@ -53,37 +67,40 @@
 
 
 
-<section class="vbox_center" style="width:95%;">
-
-  <section class="vbox_center" style="width:65%; padding-left: 15px; gap: 0px; align-items: flex-start;"> 
-    <h1 style="width:65%; padding-bottom: 15px; gap: 0px; align-items: flex-start;">Revêtements</h1>
-    <br>
+<div class="vbox_center" style="width:95%;">
+  <br>
+  <div class="vbox_center" style="width:60%; gap: 15px; align-items: flex-start;"> 
+    <h2>Revêtements</h2>
     <p>Voici nos fournisseurs de revêtement qui vous permettront de faire votre choix pour vos murs et votre toit avec l’option de vis apparente ou non.</p>
-    <br>
     <p>Pour plus d’information, n'hésitez pas à nous appeler ou à venir nos bureaux.</p>
-  </section>
+  </div>
+  <br>
+  <br>  
+  <br>
+  <div class="vbox_center" style="width:65%;"> 
+    <div class="hbox" style="gap: 100px;"> 
+      <div class="image_container">
+        <img src="images/Revêtements/Gentek-removebg-preview.png"/>
+      </div>
+      <div class="image_container" style=" height: 150px;">
+        <img src="images/Revêtements/Ideal_revêtement-removebg-preview.png"/>
+      </div>
+    </div>
 
+    <div class="hbox_center" style="gap: 30px;" > 
+      <div class="image_container">
+        <img src="images/Revêtements/Profilé_rgp-removebg-preview.png"/>
+      </div>
+      <div class="image_container">
+        <img src="images/Revêtements/Duschene_revêtement-removebg-preview.png"/>
+      </div>
+      <div class="image_container" style="max-width: 350px;">
+        <img src="images/Revêtements/Metalunic-removebg-preview.png"/>
+      </div>
+    </div>
+  </div>
 
-
-  <section class="vbox_center" style="width:65%; padding-left: 15px; gap: 0px;"> 
-    <section class="hbox" style="padding: 0px;"> 
-      <img style="object-fit: contain; height: auto; width: 600px;"
-        src="images/Revêtements/Gentek-removebg-preview.png"/>
-      <img style="object-fit: cover; height: 280px; width: 600px;"
-        src="images/Revêtements/Ideal_revêtement-removebg-preview.png"/>
-    </section>
-
-    <section class="hbox_center" style="padding: 0px;" > 
-      <img style="object-fit: contain; height: 250px; width: auto;"
-        src="images/Revêtements/Profilé_rgp-removebg-preview.png"/>
-      <img style="object-fit: cover; height: 250px; width: auto;"
-        src="images/Revêtements/Duschene_revêtement-removebg-preview.png"/>
-      <img style="object-fit: contain; height: 50px; width: auto;"
-        src="images/Revêtements/Metalunic-removebg-preview.png"/>
-    </section>
-  </section>
-
-</section>
+</div>
 
 
 <!--------------------------------------------------- Debut du Footer --------------------------------------------------->
@@ -91,7 +108,7 @@
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
@@ -109,8 +126,8 @@
 
   <div class="footer-column">
     <h1 style="color:rgb(0, 0, 0);">Questions</h1>
-    <p>Pour vos questions, veuillez appeler le : 418-682-8653</p>
-    <a href="contact.html" class="contact-button">Nous contacter</a>
+    <p>Pour vos questions, veuillez appeler le : <a href="tel:14186828653"></a>418-682-8653</a></p>
+    <button onclick="document.location='contact.html'" style="padding: 10px 30px;">Nous contacter</button>
   </div>
 </section>
 
@@ -118,7 +135,7 @@
   <div class="legal-infos">
     <p>© 2025 Pliage Québec. Créé par Services Conseils ILemoine</p>
   </div>
-    <div class="back-to-top">
+  <div class="back-to-top">
     <a href="#top">Remonter</a>
   </div>
 </section>

@@ -1,0 +1,98 @@
+
+
+/*  
+   footer styles
+*/
+
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  justify-content: space-around;
+  font-family: Arial, sans-serif;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  max-width: 300px;
+  margin: 10px;
+}
+
+.footer-logo {
+  width: 233px;
+  height: 84px;
+  object-fit: cover;
+}
+
+.footer-column h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+
+.footer-column p, .footer-column a {
+  font-size: 16px;
+  line-height: 1.9em;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-column a{
+  text-decoration: underline;
+}
+
+
+/*  
+   Legal footer styles
+*/
+
+.legal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}
+.legal-infos {
+  display: flex;
+  flex-direction: column;       /* disposition verticale */
+}
+.legal-infos p {
+  margin: 4px 0;
+  color:rgb(0, 0, 0);
+}
+
+.legal-links {
+  display: flex;
+  flex: 1 1 60%;
+  gap: 20px;
+}
+
+.legal-links p {
+  margin: 4px 0;
+  color:rgb(0, 0, 0);
+}
+
+.legal-links a {
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+hr {
+  max-width: 85%;
+  height: 1px;            /* épaisseur de la ligne */
+  background-color: black;
+  border: none;
+  margin: 40px auto;      /* ← ajoute du padding vertical + centre horizontalement */
+}

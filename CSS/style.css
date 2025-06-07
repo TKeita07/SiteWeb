@@ -1,0 +1,190 @@
+/* ------------------ Default html ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 300; /* équivalent à "Light" */
+  transition: opacity 0.5s ease;
+}
+
+
+
+header {
+  display: flex;
+  flex-direction: column; 
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  min-width: 100%;
+  z-index: 1000;
+}
+
+
+/* ------------------ Texts ------------------ */
+
+strong {
+  font-weight: bold !important;
+}
+
+h1 {
+  font-size: 19px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: bold; /* équivalent à "Regular" */
+}
+
+a {
+  color: inherit;
+}
+
+.blue-text {
+  color: #1578b6; /* Couleur bleue */
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; /* équivalent à "Regular" */
+  font-size: 42px;
+}
+
+.titre {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: bold; /* équivalent à "Regular" */
+}
+
+.big {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* ------------------ Containers ------------------ */
+
+.hbox {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.hbox_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vbox {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.vbox_center {
+  display: flex;
+  flex-direction: column;       /* disposition verticale */
+  align-items: center;          /* centre les items horizontalement */
+  justify-content: center;      /* centre les items verticalement (si hauteur suffisante) */
+}
+
+.image_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+}
+
+.image_container img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.text_image {
+  justify-content: center;
+  padding: 50px 10px 60px 10px;
+  width: 90%;
+}
+
+
+
+/* ------------------ Buttons ------------------ */
+
+button {
+  background-color: #1578b6;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+  border: #1578b6 1px solid;
+}
+
+button:hover {
+  background-color: #000000; /* Couleur plus foncée au survol */
+  color: white;
+}
+
+/* Désactiver le style global sur certains boutons */
+button.no-style {
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------ Autres ------------------ */
+
+.logo {
+  width: 84px;
+  height: 233px;
+}
+
+.logo img{
+  object-fit: cover;
+}
+
+
+
+.intro {
+  color: white;
+  max-width: 675px;
+}
+
+
+.custom-hr {
+  width: 60px;             /* ou 100%, ou 30px, selon le style désiré */
+  height: 1px;             /* épaisseur de la ligne */
+  background-color: #000;  /* couleur de la ligne */
+  margin: 20px 0;          /* espace au-dessus et en dessous */
+}
+
+
+.map {
+  min-width: 500px;
+  width: 70%;
+  min-height: 300px;
+  height: 400px;
+  border:0;
+}
