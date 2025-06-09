@@ -4,8 +4,16 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(150px, 25%));
   gap: 25px;
-  max-width: 70%; /* Limite la largeur totale de la grille */
-  margin: auto; /* Centre la grille */
+  min-width: 100%;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: column;       /* disposition verticale */
+  align-items: center;          /* centre les items horizontalement */
+  justify-content: center;      /* centre les items verticalement (si hauteur suffisante) */
+  margin: 0 auto;               /* centre le conteneur lui-même */
+  padding: 40px;
 }
 
 .color-grid-item {
@@ -18,14 +26,6 @@
   cursor: pointer;
 }
 
-.color-box {
-  display: flex;
-  flex-direction: column;       /* disposition verticale */
-  align-items: center;          /* centre les items horizontalement */
-  justify-content: center;      /* centre les items verticalement (si hauteur suffisante) */
-  margin: 0 auto;               /* centre le conteneur lui-même */
-  padding: 40px;
-}
 
 .color-grid-item img {
   width: 100%;

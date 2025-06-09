@@ -76,97 +76,103 @@
 </div>
 
 
-<div class="vbox_center" style="padding-left: 0px; padding-right: 0px;">
+<div class="vbox_center">
 
   <div class="hbox_center" style="gap: 0px;">
-    <form action="https://formsubmit.co/thomas.keita@hotmail.com" method="POST" enctype="multipart/form-data" style="width:50%;">
+    <div class="hbox" style="width:50%;">
+      <form action="https://formsubmit.co/thomas.keita@hotmail.com" method="POST" enctype="multipart/form-data">
 
-      <!-- Champs cachés pour configurer FormSubmita -->
-      <input type="hidden" name="_next" value="https://tkeita07.github.io/SiteWeb/todo.html">
-      <input type="hidden" name="_autoresponse" value="Merci pour votre message ! Nous vous répondrons bientôt.">
-      <input type="hidden" name="_template" value="table">
-      <!-- <input type="hidden" name="_captcha" value="false"> -->
+        <!-- Champs cachés pour configurer FormSubmita -->
+        <input type="hidden" name="_next" value="https://tkeita07.github.io/SiteWeb/todo.html">
+        <input type="hidden" name="_autoresponse" value="Merci pour votre message ! Nous vous répondrons bientôt.">
+        <input type="hidden" name="_template" value="table">
+        <!-- <input type="hidden" name="_captcha" value="false"> -->
 
 
-      <div class="vbox" style="padding: 0px; gap: 15px;">
-        
-        <!-- Nom - Prenom -->
-        <div class="hbox" style=" width: 100%; gap: 10px;">
-          <div class="vbox" style="width: 200px;">
-            <label class="required" for="nom">Nom</label>
-            <input class="form-input" type="text" id="nom" name="nom" required>
+        <div class="vbox" style="padding: 0px; gap: 15px;">
+          
+          <!-- Nom - Prenom -->
+          <div class="hbox" style="gap: 10px;">
+            <div class="vbox" style="width: 200px;">
+              <label class="required" for="nom">Nom</label>
+              <input class="form-input" type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="vbox" style="width: 200px;">
+            <label class="required" for="prenom">Prénom</label>
+            <input class="form-input" type="text" id="prenom" name="prenom" required>
+            </div>
+          </div>
+          
+          <!-- Email - Telephone -->
+          <div class="hbox" style="gap: 10px;">
+            <div class="vbox" style="width: 200px;">
+              <label class="required" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+
+            <div class="vbox" style="width: 200px;">
+              <label class="required" for="telephone">Téléphone</label>
+              <input class="form-input" type="tel" id="telephone" name="telephone" required>
+            </div>
+          </div>
+          
+          <!-- Materiel - Couleur -->
+          <div class="hbox" style="gap: 10px;">
+            <div class="vbox" style="width: 200px;">
+              <label for="materiel">Matériel</label>
+              <input class="form-input" type="text" id="materiel" name="materiel">
+            </div>
+
+            <div class="vbox" style="width: 200px;">
+              <label for="couleur">Couleur</label>
+              <input class="form-input" type="text" id="couleur" name="couleur">
+            </div>
+          </div>
+          
+          <!-- Dimension - Épaisseur du matériel -->
+          <div class="hbox" style="gap: 10px;">
+            <div class="vbox" style="width: 200px;">
+              <label for="dimension">Dimension</label>
+              <input class="form-input" type="text" id="dimension" name="dimension">
+            </div>
+
+            <div class="vbox" style="width: 200px;">
+              <label for="epaisseur">Épaisseur du matériel</label>
+              <input class="form-input" type="text" id="epaisseur" name="epaisseur">
+            </div>
           </div>
 
-          <div class="vbox" style="width: 200px;">
-          <label class="required" for="prenom">Prénom</label>
-          <input class="form-input" type="text" id="prenom" name="prenom" required>
+          <!-- Message -->
+          <div class="hbox" style="gap: 10px;">
+            <div class="vbox" style="width: 410px;">
+              <label for="message">Laissez-nous un message...</label>
+              <textarea class="form-textarea" id="message" name="message" rows="5"></textarea>
+            </div>
           </div>
+
+          <!-- Fichiers -->
+          <div class="hbox_center" style="width: 410px; gap: 10px;">
+            <div id="fichiers-container" class="vbox" style="gap: 10px;">
+              <label for="fichier1">Fichier 1</label>
+              <input type="file" id="fichier1" name="fichier1" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+
+            </div>
+            <button type="button" onclick="ajouterFichier()"
+              style="padding: 8px 15px;">
+              Ajouter un fichier (Max : 3)
+            </button>
+          </div>
+          
+          <button class="button-form" type="submit" style="width: 100%;"> 
+            Envoyer
+          </button>
+
         </div>
-        
-        <!-- Email - Telephone -->
-        <div class="hbox" style="width: 100%; gap: 10px;">
-          <div class="vbox" style="width: 200px;">
-            <label class="required" for="email">Email</label>
-            <input class="form-input" type="email" id="email" name="email" required>
-          </div>
-
-          <div class="vbox" style="width: 200px;">
-            <label class="required" for="telephone">Téléphone</label>
-            <input class="form-input" type="tel" id="telephone" name="telephone" required>
-          </div>
-        </div>
-        
-        <!-- Materiel - Couleur -->
-        <div class="hbox" style="width: 100%; gap: 10px;">
-          <div class="vbox" style="width: 200px;">
-            <label for="materiel">Matériel</label>
-            <input class="form-input" type="text" id="materiel" name="materiel">
-          </div>
-
-          <div class="vbox" style="width: 200px;">
-            <label for="couleur">Couleur</label>
-            <input class="form-input" type="text" id="couleur" name="couleur">
-          </div>
-        </div>
-        
-        <!-- Dimension - Épaisseur du matériel -->
-        <div class="hbox" style="width: 100%; gap: 10px;">
-          <div class="vbox" style="width: 200px;">
-            <label for="dimension">Dimension</label>
-            <input class="form-input" type="text" id="dimension" name="dimension">
-          </div>
-
-          <div class="vbox" style="width: 200px;">
-            <label for="epaisseur">Épaisseur du matériel</label>
-            <input class="form-input" type="text" id="epaisseur" name="epaisseur">
-          </div>
-        </div>
-
-        <!-- Message -->
-        <div class="hbox" style="width: 100%; gap: 10px;">
-          <div class="vbox" style="width: 410px;">
-            <label for="message">Laissez-nous un message...</label>
-            <textarea class="form-textarea" id="message" name="message" rows="5"></textarea>
-          </div>
-        </div>
-
-        <!-- Fichiers -->
-        <div class="hbox" style="width: 410px; gap: 10px;">
-          <div class="vbox" style="gap: 10px;">
-            <label for="fichiers">Importation de fichier(s) (max 3)</label>
-            <input type="file" id="fichiers" name="fichiers[]" 
-              multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" onchange="checkFileCount(this)">
-          </div>
-        </div>
-        
-        <button class="button-form" type="submit" style="width: 90%;"> 
-          Envoyer
-        </button>
-
-      </div>
 
 
-    </form>
+      </form>
+    </div>
 
     <div style="overflow: hidden; object-fit: cover;">
       <img src="images/Photos/Soumission.png"
@@ -187,6 +193,29 @@
 </script>
 
 
+<script>
+let compteurFichiers = 1;
+
+function ajouterFichier() {
+    compteurFichiers++;
+    const container = document.getElementById('fichiers-container');
+    const div = document.createElement('div');
+    div.classList.add("vbox");
+    div.innerHTML = `
+        <br>
+        <label for="fichier${compteurFichiers}" >Fichier ${compteurFichiers} :</label>
+        <input type="file" id="fichier${compteurFichiers}" name="fichier${compteurFichiers}" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+        <button type="button" onclick="removeFichier(this)" style="padding: 0px 10px; margin-top: 5px">Supprimer</button>
+    `;
+    container.appendChild(div);
+}
+
+function removeFichier(fichier) {
+    fichier.parentElement.remove()
+    // compteurFichiers--;
+
+}
+</script>
 
 <!--------------------------------------------------- Debut du Footer --------------------------------------------------->
 <hr><!-- Footer -->

@@ -1,35 +1,23 @@
 .image-gridshow {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 1fr));
-  gap: 25px;
-  max-width: 70%;
-  margin: auto;
-  padding: 0;
-  min-width: 300px;
+  grid-template-columns: repeat(4, minmax(25%, 25%));
+  justify-content: center;
+  gap: 20px;
+  min-width: 100%;
 }
 
 /* Conteneur de chaque image + texte */
 .gid-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  margin: 0 auto;
-  padding: 40px;
-  color: black;
+  min-width: 105px;
 }
 
 .image-gridshow-item {
   position: relative;
-  width: 100%;
   aspect-ratio: 1 / 1; /* défaut: carré */
   overflow: hidden;
   box-shadow: #00000056 0px 0px 10px 0px;
   cursor: pointer;
   transition: transform 0.5s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .image-gridshow-item img {

@@ -2,125 +2,49 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header Pliage Québec</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merci pour votre message</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    html{
-      background-color: aquamarine;
-      width: inherit; /* ✅ Largeur fixe pour forcer le scroll horizontal */
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      width: inherit;
-    }
-
-    /* ✅ Pas de width fixe ici */
-    header {
+      background-color: #f2f2f2;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
-      flex-wrap: wrap;
-      width: inherit;
-    }
-
-    .logo img {
-      max-height: 84px;
-    }
-
-    .contact-info {
-      text-align: right;
-      font-size: 14px;
-    }
-
-    .contact-info a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
       justify-content: center;
-      padding: 0;
+      height: 100vh;
       margin: 0;
-      flex-wrap: wrap;
-      background-color: #444;
+      text-align: center;
     }
 
-    nav li {
-      margin: 5px 10px;
+    h1 {
+      color: #4CAF50;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      display: block;
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
     }
 
-    nav a:hover {
-      background-color: #555;
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-    @media (max-width: 768px) {
-      .contact-info {
-        text-align: center;
-        width: 100%;
-        margin-top: 10px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
+    button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
-
-  <!-- ✅ Contenu qui force une grande largeur -->
-  <div style="width: 2000px; height: 0;"></div>
-
-  <!-- ✅ Le header va maintenant suivre cette largeur -->
-  <header>
-    <div class="logo">
-      <img src="https://static.wixstatic.com/media/54c4a1_61b8976752374883a1e98cb0599bb82a~mv2.png" alt="Logo Pliage Québec">
-    </div>
-    <div class="contact-info">
-      <p><a href="tel:14186828653">418-682-8653</a></p>
-      <p><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></p>
-      <p>1023 rue Rivard<br>Québec, Qc, G1M3G8</p>
-    </div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">Produits</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Projets</a></li>
-      <li><a href="#">À propos</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Soumission</a></li>
-    </ul>
-  </nav>
-
-  <!-- Large contenu test -->
-  <div style="width: 2000px; height: 200px; background-color: #ccc; margin: 50px auto;">
-    Ceci est un contenu large qui force un scroll horizontal.
-  </div>
-
+  <h1>Merci !</h1>
+  <p>Votre message a bien été envoyé.</p>
+  <button onclick="window.location.href='/'">Retour au site</button>
 </body>
 </html>
