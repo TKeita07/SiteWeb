@@ -79,7 +79,7 @@
 <div class="vbox_center">
 
   <div class="hbox_center" style="gap: 0px;">
-    <div class="hbox" style="width:50%;">
+    <div class="hbox" style="width:50%; margin-left: 50px;">
       <form action="https://formsubmit.co/thomas.keita@hotmail.com" method="POST" enctype="multipart/form-data">
 
         <!-- Champs cachés pour configurer FormSubmita -->
@@ -152,18 +152,29 @@
           </div>
 
           <!-- Fichiers -->
-          <div class="hbox_center" style="width: 410px; gap: 10px;">
-            <div id="fichiers-container" class="vbox" style="gap: 10px;">
-              <label for="fichier1">Fichier 1</label>
-              <input type="file" id="fichier1" name="fichier1" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+          <div class="hbox" style="width: 410px; gap: 10px;">
+            <div class="vbox" style="gap: 10px;">
+              <div id="fichier1-container" class="vbox">
+                <label for="fichier1">Fichier 1</label>
+                <input type="file" id="fichier1" name="fichier1" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+              </div>
+              <div id="fichier2-container" class="vbox" style="display: none;">
+                <label for="fichier2">Fichier 2</label>
+                <input type="file" id="fichier2" name="fichier2" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+              </div>
+              <div id="fichier3-container" class="vbox" style="display: none;">
+                <label for="fichier3">Fichier 3</label>
+                <input type="file" id="fichier3" name="fichier3" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+              </div>
 
             </div>
-            <button type="button" onclick="ajouterFichier()"
-              style="padding: 8px 15px;">
-              Ajouter un fichier (Max : 3)
-            </button>
+
           </div>
-          
+          <button id="boutton-supprimer" type="button" onclick="removeFichier(this)" style="padding: 0px 10px; margin-top: 5px">Supprimer</button>
+          <button type="button" onclick="ajouterFichier()"
+            style="padding: 8px 15px;">
+            Ajouter un fichier (Max : 3)
+          </button>
           <button class="button-form" type="submit" style="width: 100%;"> 
             Envoyer
           </button>
@@ -195,25 +206,42 @@
 
 <script>
 let compteurFichiers = 1;
+let fileList = [];
 
 function ajouterFichier() {
+    if (compteurFichiers >= 3) {
+      return;
+    }
+
     compteurFichiers++;
-    const container = document.getElementById('fichiers-container');
-    const div = document.createElement('div');
-    div.classList.add("vbox");
-    div.innerHTML = `
-        <br>
-        <label for="fichier${compteurFichiers}" >Fichier ${compteurFichiers} :</label>
-        <input type="file" id="fichier${compteurFichiers}" name="fichier${compteurFichiers}" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
-        <button type="button" onclick="removeFichier(this)" style="padding: 0px 10px; margin-top: 5px">Supprimer</button>
-    `;
-    container.appendChild(div);
+    if (compteurFichiers == 1) {
+      document.getElementById('boutton-supprimer').style.display = 'flex';
+      document.getElementById('fichier1-container').style.display = 'flex';
+    }
+    if (compteurFichiers == 2) {
+      document.getElementById('fichier2-container').style.display = 'flex';
+    }
+    if (compteurFichiers == 3) {
+      document.getElementById('fichier3-container').style.display = 'flex';
+    }
 }
 
 function removeFichier(fichier) {
-    fichier.parentElement.remove()
-    // compteurFichiers--;
+    if (compteurFichiers == 0) {
+      return;
+    }
 
+    if (compteurFichiers == 1) {
+      document.getElementById('boutton-supprimer').style.display = 'none';
+      document.getElementById('fichier1-container').style.display = 'none';
+    }
+    if (compteurFichiers == 2) {
+      document.getElementById('fichier2-container').style.display = 'none';
+    }
+    if (compteurFichiers == 3) {
+      document.getElementById('fichier3-container').style.display = 'none';
+    }
+    compteurFichiers--;
 }
 </script>
 
