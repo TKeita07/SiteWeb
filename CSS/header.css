@@ -1,5 +1,24 @@
 
 /* ------------------ Header and Navigation ------------------ */
+/* Media queries pour différentes tailles */
+@media (max-width: 768px) {
+
+}
+
+
+
+header {
+  display: flex;
+  flex-direction: column; 
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  min-width: 100%;
+  z-index: 1000;
+}
+
 
 .header {
   width: 100%;
