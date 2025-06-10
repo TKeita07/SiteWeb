@@ -629,13 +629,13 @@
       .filter(cb => cb.checked)
       .map(cb => cb.value);
     if (activeFilters.length === 0) {
-      boxes.forEach(box => box.style.display = 'flex');
+      boxes.forEach(box => box.style.display = 'grid');
       return;
     }
     boxes.forEach(box => {
       const categories = box.dataset.categories.split(',');
       const match = categories.some(cat => activeFilters.includes(cat));
-      box.style.display = match ? 'flex' : 'none';
+      box.style.display = match ? 'grid' : 'none';
     });
   }));
 </script>
