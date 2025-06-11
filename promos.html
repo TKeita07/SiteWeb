@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="vbox_center"
+    <!-- <div class="vbox_center"
         style="
         height: 85vh;
         margin: 0;
@@ -23,9 +23,14 @@
 
 
 
-    </div>
+    </div> -->
 
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="fichier">
+    <button type="submit">Envoyer</button>
+  </form>
 
+<!-- 
   <script>
     function uploadFile() {
       const fileInput = document.getElementById('fileInput');
@@ -47,7 +52,7 @@
       .then(data => alert("Succès : " + data))
       .catch(error => console.error("Erreur : ", error));
     }
-  </script>
+  </script> -->
 </body>
 </html>
 
