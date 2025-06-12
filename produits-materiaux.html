@@ -74,6 +74,7 @@
   <div class="lightbox-content">
     <img class="lightbox-img" id="lightbox-img" src="" alt="">
     <div id="lightbox-caption" class="lightbox-caption"></div>
+    <div id="lightbox-caption2" class="lightbox-caption"></div>
   </div>
 
   <span class="nav right" onclick="changeImage(1)">&#10095;</span>
@@ -125,6 +126,7 @@
         <section class="vbox_center gridshow_caption"> 
           <h1></h1>
           <p>Aluminium Gentek robuste Épaisseur 0.022 pouce</p>
+          <p class="dispo">*Disponible en plusieurs couleurs</p>
         </section>
       </section>
       
@@ -161,6 +163,7 @@
         <section class="vbox_center gridshow_caption"> 
             <h1></h1>
             <p>Acier émaillé du 26 au 22 GA</p>
+            <p class="dispo">*Disponible en plusieurs couleurs</p>
         </section>
       </section>
       
@@ -278,9 +281,12 @@
     const item = boxElements[currentIndex];
     const img = item.querySelector('img');
     const caption = item.querySelector('p')?.innerText || "";
+    const dispo = item.querySelector('.dispo')?.innerText || "";
+    
 
     document.getElementById('lightbox-img').src = img.src;
     document.getElementById('lightbox-caption').innerText = caption;
+    document.getElementById('lightbox-caption2').innerText = dispo;
   }
 </script>
 

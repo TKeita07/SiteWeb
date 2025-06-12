@@ -155,24 +155,29 @@
           <div class="hbox" style="width: 410px; gap: 10px;">
             <div class="vbox" style="gap: 10px;">
               <div id="fichier1-container" class="vbox">
-                <label for="fichier1">Fichier 1</label>
+                <label>Fichier 1</label>
                 <input type="file" id="fichier1" name="fichier1" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
               </div>
               <div id="fichier2-container" class="vbox" style="display: none;">
-                <label for="fichier2">Fichier 2</label>
+                <label>Fichier 2</label>
                 <input type="file" id="fichier2" name="fichier2" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
               </div>
-              <div id="fichier3-container" class="vbox" style="display: none;">
-                <label for="fichier3">Fichier 3</label>
+              <div id="fichier3-container" class="vbox" style="display: none; ">
+                <label>Fichier 3</label>
                 <input type="file" id="fichier3" name="fichier3" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+              
               </div>
 
             </div>
 
           </div>
-          <button id="boutton-supprimer" type="button" onclick="removeFichier(this)" style="padding: 0px 10px; margin-top: 5px">Supprimer</button>
+          <button id="boutton-supprimer" type="button" class="boutton default-style"
+            onclick="removeFichier(this)" style="padding: 0px 10px;">
+            Supprimer
+          </button>
+          
           <button type="button" onclick="ajouterFichier()"
-            style="padding: 8px 15px;">
+            style="padding: 0px 15px;" class="boutton default-style">
             Ajouter un fichier (Max : 3)
           </button>
           <button class="button-form" type="submit" style="width: 100%;"> 
