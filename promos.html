@@ -18,34 +18,92 @@
         margin: 0;
         text-align: center;
         padding-top: 150px;">
-        <p class="blue-text">Merci !</p>
-        <h2>Uploader un fichiers</h2>
+        <p class="blue-text">Mise à jour du fichier Promotions</p>
         <form action="upload.php" method="post" enctype="multipart/form-data">
           <br>
-          <div class="vbox_center" style="gap: 30px;">
-            <input type="file" name="fichier" accept=".pdf" style="display: none;">
+          <br>
+          <br>
 
-            <!-- Lier un label à l'input caché, et utiliser une image comme déclencheur -->
-            <label for="fichier" style="cursor: pointer;">
-              <div class="image_container send" style="width: 326px;">
-                <img src="/images/Promotions/polly.png" alt="Choisir un fichier">
-              </div>
-            </label>
+        
+          <div class="hbox_center" style="gap: 100px;">
+            <div class="vbox_center" style="gap: 10px;">
+              <input type="file" id="fichier" name="fichier" accept=".pdf" style="display: none;">
 
-            <!-- Bouton submit remplacé par une image -->
-            <div class="image_container send" style="width: 326px; height: 250px;">
-              <button type="submit" style="all: unset; cursor: pointer;">
-                  <img src="/images/Promotions/watson.png" alt="Envoyer"  style="padding-top: 20px;">
-              </button>              
+              <!-- Lier un label à l'input caché, et utiliser une image comme déclencheur -->
+
+              <h3>Cliquer sur Polly pour ajouter un fichier promotion</h3>
+              <label for="fichier" style="cursor: pointer;">
+                <div class="image_container send" style="width: 326px;">
+                  <img src="/images/Promotions/polly.png" alt="Choisir un fichier">
+                </div>
+              </label>
+              <!-- Ici le nom du fichier sélectionné s'affichera -->
+              <p id="nom-fichier" style="font-weight: bold;">Fichier sélectionné : </p>
+
             </div>
-
+            <div class="vbox_center" style="gap: 10px;">
+              <h3>Cliquer sur Watson pour Télécharger</h3>
+              <!-- Bouton submit remplacé par une image -->
+              <div class="image_container send" style="width: 326px; height: 250px;">
+                <button type="submit" style="all: unset; cursor: pointer;">
+                    <img src="/images/Promotions/watson.png" alt="Envoyer"  style="padding-top: 20px;">
+                </button>              
+              </div>
+            </div>
+          
+          
           </div>
+
         </form>
+          <br>
+          <br>
+          <br>
+        <button onclick="document.location='index.html'">Retour au site</button>
 
 
 
     </div>
 
+
+<script>
+  const inputFichier = document.getElementById('fichier');
+  const affichageNom = document.getElementById('nom-fichier');
+
+  inputFichier.addEventListener('change', function () {
+    if (this.files && this.files.length > 0) {
+      affichageNom.textContent = "Fichier sélectionné : " + this.files[0].name;
+      localStorage.setItem('nomFichierPromo', nom);
+    } else {
+      affichageNom.textContent = "Fichier sélectionné : ";
+      localStorage.removeItem('nomFichierPromo');
+    }
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+  const nomSauvegarde = localStorage.getItem('nomFichierPromo');
+  if (nomSauvegarde) {
+    affichageNom.textContent = "Fichier sélectionné : " + nomSauvegarde;
+  }
+});
+</script>
+
+<script>
+  // Fonction pour lire les paramètres dans l'URL
+  function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  const message = getParam("upload");
+  if (message === "success") {
+    alert("✅ Fichier téléversé avec succès !");
+  } else if (message === "error_type") {
+    alert("❌ Type de fichier non autorisé. Seuls les PDF sont acceptés.");
+  } else if (message === "error_upload") {
+    alert("❌ Erreur lors du téléversement du fichier.");
+  } else if (message === "error_nofile") {
+    alert("❌ Impossible de déplacer le fichier sur le serveur.");
+  }
+</script>
 
 </body>
 </html>

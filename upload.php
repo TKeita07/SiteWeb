@@ -3,7 +3,8 @@ $allowed_extensions = ['pdf'];
 $extension = pathinfo($_FILES['fichier']['name'], PATHINFO_EXTENSION);
 
 if (!in_array(strtolower($extension), $allowed_extensions)) {
-    die("Type de fichier interdit.");
+    header("Location: promos.html?upload=error_type"); // ou index.html ou ta page d'accueil
+    exit();
 }
 
 if ($_FILES['fichier']['error'] === 0) {
@@ -11,10 +12,16 @@ if ($_FILES['fichier']['error'] === 0) {
     $nom_fichier = 'promotions.pdf'; // 🔁 Nom fixe souhaité
 
     // Déplace et renomme le fichier
-    move_uploaded_file($_FILES['fichier']['tmp_name'], $dossier . $nom_fichier);
+    if (move_uploaded_file($_FILES['fichier']['tmp_name'], $dossier . $nom_fichier)){
+        header("Location: promos.html?upload=success"); // ou index.html ou ta page d'accueil
+        exit();
+    } else {
+        header("Location: promos.html?upload=error_nofile"); // ou index.html ou ta page d'accueil
+        exit();
+    }
 
-    echo "Fichier reçu et enregistré sous le nom promotions.pdf.";
 } else {
-    echo "Erreur lors de l'envoi : " . $_FILES['fichier']['error'];
+    header("Location: index.html?upload=error_upload");
+    exit();
 }
 ?>
