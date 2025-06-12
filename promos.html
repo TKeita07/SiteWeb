@@ -8,51 +8,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/promos.css" />
 </head>
 
 <body>
-    <!-- <div class="vbox_center"
+    <div class="vbox_center"
         style="
         height: 85vh;
         margin: 0;
-        text-align: center;">
+        text-align: center;
+        padding-top: 150px;">
         <p class="blue-text">Merci !</p>
         <h2>Uploader un fichiers</h2>
-        <input type="file" id="fileInput"><br><br>
-        <button onclick="uploadFile()">Envoyer</button>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          <br>
+          <div class="vbox_center" style="gap: 30px;">
+            <input type="file" name="fichier" accept=".pdf" style="display: none;">
+
+            <!-- Lier un label à l'input caché, et utiliser une image comme déclencheur -->
+            <label for="fichier" style="cursor: pointer;">
+              <div class="image_container send" style="width: 326px;">
+                <img src="/images/Promotions/polly.png" alt="Choisir un fichier">
+              </div>
+            </label>
+
+            <!-- Bouton submit remplacé par une image -->
+            <div class="image_container send" style="width: 326px; height: 250px;">
+              <button type="submit" style="all: unset; cursor: pointer;">
+                  <img src="/images/Promotions/watson.png" alt="Envoyer"  style="padding-top: 20px;">
+              </button>              
+            </div>
+
+          </div>
+        </form>
 
 
 
-    </div> -->
+    </div>
 
-  <form action="upload.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="fichier">
-    <button type="submit">Envoyer</button>
-  </form>
 
-<!-- 
-  <script>
-    function uploadFile() {
-      const fileInput = document.getElementById('fileInput');
-      const file = fileInput.files[0];
-
-      if (!file) {
-        alert("Aucun fichier sélectionné !");
-        return;
-      }
-
-      const formData = new FormData();
-      formData.append("file", file);
-
-      fetch("/upload", {
-        method: "POST",
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => alert("Succès : " + data))
-      .catch(error => console.error("Erreur : ", error));
-    }
-  </script> -->
 </body>
 </html>
 

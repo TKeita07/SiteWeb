@@ -1,0 +1,12 @@
+.send {
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+.send:hover {
+  background-color: #000000; /* Couleur plus foncée au survol */
+  color: white;
+}

@@ -1,16 +1,12 @@
-
-
 /*  
    footer styles
 */
-
 
 .footer {
   display: flex;
   flex-wrap: wrap;
   padding: 40px 20px;
   justify-content: space-around;
-  font-family: Arial, sans-serif;
 }
 
 .footer-column {
@@ -30,7 +26,6 @@
   margin-bottom: 10px;
 }
 
-
 .footer-column p, .footer-column a {
   font-size: 16px;
   line-height: 1.9em;
@@ -38,10 +33,9 @@
   text-decoration: none;
 }
 
-.footer-column a{
+.footer-column a {
   text-decoration: underline;
 }
-
 
 /*  
    Legal footer styles
@@ -56,13 +50,15 @@
   font-size: 14px;
   border-top: 1px solid #ccc;
 }
+
 .legal-infos {
   display: flex;
-  flex-direction: column;       /* disposition verticale */
+  flex-direction: column;
 }
+
 .legal-infos p {
   margin: 4px 0;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .legal-links {
@@ -73,7 +69,7 @@
 
 .legal-links p {
   margin: 4px 0;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .legal-links a {
@@ -86,13 +82,67 @@
   text-decoration: underline;
 }
 
-
-
-
 hr {
   max-width: 85%;
-  height: 1px;            /* épaisseur de la ligne */
+  height: 1px;
   background-color: black;
   border: none;
-  margin: 40px auto;      /* ← ajoute du padding vertical + centre horizontalement */
+  margin: 40px auto;
+}
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+
+/* Mobile - écrans moyens */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 25px 20px;
+    text-align: center;
+  }
+  
+  .footer-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 15px 0;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    height: 54px;
+    margin: 0 auto;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column p, .footer-column a {
+    font-size: 14px;
+    line-height: 1.8em;
+  }
+  
+  .footer-column button {
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .legal-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .legal-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  hr {
+    max-width: 90%;
+    margin: 30px auto;
+  }
 }

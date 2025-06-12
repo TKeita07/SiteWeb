@@ -1,4 +1,11 @@
 <?php
+$allowed_extensions = ['pdf'];
+$extension = pathinfo($_FILES['fichier']['name'], PATHINFO_EXTENSION);
+
+if (!in_array(strtolower($extension), $allowed_extensions)) {
+    die("Type de fichier interdit.");
+}
+
 if ($_FILES['fichier']['error'] === 0) {
     $dossier = 'Promotions/';
     $nom_fichier = 'promotions.pdf'; // 🔁 Nom fixe souhaité

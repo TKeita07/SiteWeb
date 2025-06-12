@@ -1,4 +1,3 @@
-
 /*  
    Carousel styles
 */
@@ -21,7 +20,6 @@
   /* Cacher la scrollbar */
   scrollbar-width: none;        /* Firefox */
   -ms-overflow-style: none;     /* Internet Explorer 10+ */
-
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -44,7 +42,6 @@
   padding: 10px;
 }
 
-
 .carousel-button.left {
   position: relative;
   left: 0px;
@@ -52,7 +49,6 @@
   color: black;
   border: none;
   cursor: pointer;
-
 }
 
 .carousel-button.right {
@@ -62,15 +58,14 @@
   color: black;
   border: none;
   cursor: pointer;
-
 }
 
 .carousel-button:hover {
-    background-color: none;
+  background-color: none;
 }
 
 .carousel-item {
-  flex: 0 0 auto;               /* ← très important : garde la taille fixe */
+  flex: 0 0 auto;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -102,4 +97,41 @@
 
 .carousel-item:hover .overlay-text {
   opacity: 1;
+}
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+
+
+/* Mobile - écrans moyens */
+@media screen and (max-width: 768px) {
+  .carousel {
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .carousel-container {
+    gap: 8px;
+    padding: 8px;
+  }
+  
+  .carousel-container img {
+    max-height: 250px;
+    width: 350px;
+  }
+  
+  .carousel-button {
+    font-size: 24px;
+    padding: 6px;
+  }
+  
+  .overlay-text {
+    font-size: 18px;
+    padding: 6px 12px;
+    width: 90%;
+  }
+  
+  /* Améliorer l'expérience tactile */
+  .carousel-item:active .overlay-text {
+    opacity: 1;
+  }
 }
