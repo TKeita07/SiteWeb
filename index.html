@@ -109,7 +109,7 @@
     style="justify-content: space-evenly; max-width: 835px; width: 100%;">
       <button onclick="document.location='projets.html'">Voir nos réalisations</button>
       <button onclick="document.location='contact.html'">Contactez-nous</button>
-      <button onclick="window.open('./Promotions/Promotions.pdf', '_blank')">Surplus d'inventaire</button>
+      <button id="ouvrirPDF">Surplus d'inventaire</button>
   </div>
 </div>
  
@@ -162,23 +162,23 @@
 
 <br>
 <br>
-<br>
-<br>
 
 <!-- Section avec image et texte -->
-  <div class="vbox m_realisations"
-    style="
-    max-width: 450px;
-    min-width: 350px;
-    margin-left: 100px;">    
-    <div class="titre big">
-        <a href="projets.html">Nos réalisations</a>
+  <div class="vbox m_center">
+    <div class="vbox  m_realisations"
+      style="
+      max-width: 450px;
+      min-width: 350px;
+      margin-left: 100px;">    
+      <div class="titre big">
+          <a href="projets.html">Nos réalisations</a>
+      </div>
+      <div class="blue-text">
+          <p>Projets récents</p>
+      </div>
+      <p>Découvrez certains des projets de pliage de métal que nous avons réalisés pour nos clients, 
+              démontrant notre expertise et notre engagement envers l'excellence.</p>
     </div>
-    <div class="blue-text">
-        <p>Projets récents</p>
-    </div>
-    <p>Découvrez certains des projets de pliage de métal que nous avons réalisés pour nos clients, 
-            démontrant notre expertise et notre engagement envers l'excellence.</p>
   </div>
 
 
@@ -188,16 +188,16 @@
 
   <div class="carousel-container" id="carousel">
     <div class="carousel-item" onclick="openLightbox(this)">
-        <img src="images/Projets/Comptoir en acier inoxydable brossé.jpeg" alt="Image 1">
-        <div class="overlay-text">Comptoir acier inoxydable brossé</div>
-    </div>
-    <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/Projets/Revêtement distinction métal unic.jpg" alt="Image 1">
         <div class="overlay-text">Revêtement distinction métal unic</div>
     </div>
     <div class="carousel-item" onclick="openLightbox(this)">
         <img src="images/Projets/Corniche une fois installée.jpg" alt="Image 1">
         <div class="overlay-text">Corniche installée</div>
+    </div>
+    <div class="carousel-item" onclick="openLightbox(this)">
+        <img src="images/Projets/Corbeau avant-après.jpg" alt="Image 1">
+        <div class="overlay-text">Corbeau avant-après</div>
     </div>
 
     <div class="carousel-item" onclick="openLightbox(this)">
@@ -394,7 +394,13 @@
   }
 </script>
 
-
+<script>
+  document.getElementById('ouvrirPDF').addEventListener('click', () => {
+    const timestamp = new Date().getTime(); // Génère un nombre unique
+    const url = `./Promotions/Promotions.pdf?v=${timestamp}`; // Ajoute ?v=timestamp
+    window.open(url, '_blank');
+  });
+</script>
 
 
 </body>

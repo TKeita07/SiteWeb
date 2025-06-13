@@ -293,7 +293,8 @@ button.default-style:active {
 
   .m_realisations {
     margin-left: 0px !important;
-    padding: 0px 20px !important;
+    padding: 0px 0px !important;
+    width:95% !important;
   }
   
   .m_hbox_center {
