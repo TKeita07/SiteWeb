@@ -22,23 +22,31 @@
 
 <header>
   <div class="hbox header">
-    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
+    <div class="image_container image_header" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
-      <div class="vbox" style="gap: 15px; align-items: end;">
+    <div class="hbox_center header_infos" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox header_contact" style="gap: 15px; align-items: end;">
         <div><a href="tel:14186828653">418-682-8653</a></div>
         <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
       </div>
-      <div style="width: 120px;">
+      <div class="header_contact" style="width: 120px;">
         <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
       </div>
       
     </div>
 
   </div>
-    
-  <nav>
+  
+  <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+  </button>
+  <!-- Overlay pour fermer le menu -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <nav id="mobileNav" >
     <a href="index.html" class="nav-item">Accueil</a>
     <div class="nav-item-p">
       <div class="dropdown ">
@@ -74,28 +82,28 @@
     <p>Voici nos fournisseurs de revêtement qui vous permettront de faire votre choix pour vos murs et votre toit avec l’option de vis apparente ou non.</p>
     <p>Pour plus d’information, n'hésitez pas à nous appeler ou à venir nos bureaux.</p>
   </div>
-  <br>
-  <br>  
-  <br>
-  <div class="vbox_center" style="width:65%;"> 
-    <div class="hbox" style="gap: 100px;"> 
-      <div class="image_container">
-        <img src="images/Revêtements/Gentek-removebg-preview.png"/>
+  <div class="vbox_center" style="width:95%;">
+    <br>
+    <div class="vbox_center m_width_big" style="width:65%;"> 
+      <div class="hbox m_reverse_hbox" style="gap: 100px;"> 
+        <div class="image_container">
+          <img src="images/Revêtements/Gentek-removebg-preview.png"/>
+        </div>
+        <div class="image_container" style=" height: 150px;">
+          <img src="images/Revêtements/Ideal_revêtement-removebg-preview.png"/>
+        </div>
       </div>
-      <div class="image_container" style=" height: 150px;">
-        <img src="images/Revêtements/Ideal_revêtement-removebg-preview.png"/>
-      </div>
-    </div>
 
-    <div class="hbox_center" style="gap: 30px;" > 
-      <div class="image_container">
-        <img src="images/Revêtements/Profilé_rgp-removebg-preview.png"/>
-      </div>
-      <div class="image_container">
-        <img src="images/Revêtements/Duschene_revêtement-removebg-preview.png"/>
-      </div>
-      <div class="image_container" style="max-width: 350px;">
-        <img src="images/Revêtements/Metalunic-removebg-preview.png"/>
+      <div class="hbox_center m_no_gap" style="gap: 30px;" > 
+        <div class="image_container">
+          <img src="images/Revêtements/Profilé_rgp-removebg-preview.png"/>
+        </div>
+        <div class="image_container m_fournisseurs_image">
+          <img src="images/Revêtements/Duschene_revêtement-removebg-preview.png"/>
+        </div>
+        <div class="image_container" style="max-width: 350px;">
+          <img src="images/Revêtements/Metalunic-removebg-preview.png"/>
+        </div>
       </div>
     </div>
   </div>
@@ -152,6 +160,48 @@
 </script>
 
 <!--------------------------------------------------- Fin du Footer --------------------------------------------------->
+
+
+<script>
+    // Script pour le menu hamburger mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const navOverlay = document.getElementById('navOverlay');
+        const dropdownProduits = document.getElementById('dropdownProduits');
+
+        // Toggle du menu principal
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Fermer le menu
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Event listeners
+        menuToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', closeMenu);
+
+
+        // Ajuster le comportement selon la taille d'écran
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+
+    });
+</script>
+
 
 <!---------------------- Scripts -------------------------->
 </body>

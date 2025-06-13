@@ -131,6 +131,11 @@ nav {
 
 /* Mobile - écrans moyens et petits */
 @media screen and (max-width: 768px) {
+  header {
+    
+    position: relative;
+  }
+
   .header {
     height: auto;
     min-height: 80px;

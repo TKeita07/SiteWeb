@@ -42,3 +42,19 @@
 }
 
 
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+/* ------------------ Mobile ------------------ */
+/* Mobile - écrans moyens */
+@media screen and (max-width: 768px) {
+  .image-gridshow {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    min-width: 100%;
+  }
+
+
+}

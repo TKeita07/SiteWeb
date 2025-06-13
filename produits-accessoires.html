@@ -22,23 +22,31 @@
 
 <header>
   <div class="hbox header">
-    <div class="image_container" style="width: 233px; height: 83px; margin-left: 150px;">
+    <div class="image_container image_header" style="width: 233px; height: 83px; margin-left: 150px;">
       <img src="images/Logo_PNG.png" alt="Logo Pliage Québec">
     </div>
-    <div class="hbox_center" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
-      <div class="vbox" style="gap: 15px; align-items: end;">
+    <div class="hbox_center header_infos" style="gap: 20px; height: 95px; color: white;  margin-right: 150px;">
+      <div class="vbox header_contact" style="gap: 15px; align-items: end;">
         <div><a href="tel:14186828653">418-682-8653</a></div>
         <div><a href="mailto:info@pliagequebec.com">info@pliagequebec.com</a></div>
       </div>
-      <div style="width: 120px;">
+      <div class="header_contact" style="width: 120px;">
         <p>1023 rue Rivard, Québec, QC G1M 3G8</p>
       </div>
       
     </div>
 
   </div>
-    
-  <nav>
+  
+  <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+  </button>
+  <!-- Overlay pour fermer le menu -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <nav id="mobileNav" >
     <a href="index.html" class="nav-item">Accueil</a>
     <div class="nav-item-p">
       <div class="dropdown ">
@@ -80,8 +88,8 @@
 
 
 <div class="vbox_center">
-  <div class="vbox_center" style="width:70%; padding: 50px 30px;">
-    <div class="vbox_center" style="gap: 15px; align-items: flex-start; width: 100%;"> 
+  <div class="vbox_center m_remove_all" style="width:70%; padding: 50px 30px;">
+    <div class="vbox_center m_text_box" style="gap: 15px; margin-bottom: 40px;  align-items: flex-start; width: 100%;"> 
       <h3>Accessoires</h3>
       <p>Arrêt de neige ou vis sont deux éléments déterminants pour maintenir une toiture en bonne santé mais aussi pour éviter une chute de neige ou de glace trop importante.</p>
       <div class="vbox" style="gap: 0px; align-items: flex-start;"> 
@@ -102,7 +110,7 @@
         </ul>
       </div>
     </div>
-    <br>
+
     <div class="image-gridshow">
       
       <div class="gid-box"
@@ -257,6 +265,48 @@
 </script>
 
 <!--------------------------------------------------- Fin du Footer --------------------------------------------------->
+
+
+<script>
+    // Script pour le menu hamburger mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const navOverlay = document.getElementById('navOverlay');
+        const dropdownProduits = document.getElementById('dropdownProduits');
+
+        // Toggle du menu principal
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Fermer le menu
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Event listeners
+        menuToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', closeMenu);
+
+
+        // Ajuster le comportement selon la taille d'écran
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+
+    });
+</script>
+
 
 <!---------------------- Scripts -------------------------->
 

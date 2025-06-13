@@ -101,6 +101,13 @@ a {
   overflow: hidden;
 }
 
+.image_container_big {
+  max-width: 950px;
+  min-width: 250px;
+  min-height: 416px;
+  max-height: 416px;
+}
+
 .image_container img {
   object-fit: cover;
   width: 100%;
@@ -197,7 +204,7 @@ button.default-style:active {
 }
 
 /* ------------------ RESPONSIVE DESIGN ------------------ */
-
+/* ------------------ Mobile ------------------ */
 /* Mobile - écrans moyens */
 @media screen and (max-width: 768px) {
   body {
@@ -228,34 +235,86 @@ button.default-style:active {
     gap: 20px;
   }
 
-  .services {
-    min-height: 0px !important;
-    margin-left: 0px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  .text_image {
+    padding: 20px 0px;
+    width: 100%;
   }
 
-  .realisations {
+  .text_image .vbox {
+
+    min-width: auto !important;
+    max-width: none !important;
+  }
+  
+  /* Images */
+  .image_container {
+    
+    object-fit: cover;
+    min-width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .image_container_big {
+    max-width: none;
+    min-width: 0;
+    min-height: auto;
+    max-height: none;
+  
+  }
+  /* Map */
+  .map {
+    min-width: 250px;
+    width: 95%;
+    height: 250px;
+  }
+
+
+  
+  /* -------------- Mobile Only -------------- */
+
+
+  .m_remove_all {
+    all: unset !important; /* réinitialise presque tout */
+  }
+
+  .m_no_margs {
+    padding: 0px 20px;
+    width: auto !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    max-width: none !important;
+  }
+
+  .m_no_side_pad{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .m_realisations {
     margin-left: 0px !important;
     padding: 0px 20px !important;
   }
   
-  .mobile_hbox_center {
+  .m_hbox_center {
     flex-direction: column !important;
   }
 
-  .m_fournisseur {
+  .m_width_big {
     width:95% !important;
   }
   
-  .center_reverse {
-    flex-direction: column-reverse !important;
-  }
   
-  .text_image {
-    padding: 20px 15px 30px 15px;
-    width: 95%;
+  .m_flex_start_reverse {
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+    justify-content: start !important;
+  }
+
+  .m_flex_center_reverse {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   .m_reverse_hbox{
@@ -271,43 +330,51 @@ button.default-style:active {
     gap: 0px !important;
 
   }
-
-  .text_image .vbox {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    min-width: auto !important;
-    max-width: none !important;
-    text-align: center;
-  }
-  
-  /* Images */
-  .image_container {
-    min-width: auto !important;
-    max-width: 100% !important;
-  }
-
   .m_fournisseurs_image {
     max-height: 100px !important;
   }
   
   /* Boutons */
-  .mobile_button_intro {
+  .m_button_intro {
     flex-direction: column !important;
     gap: 15px !important;
     width: 90% !important;
     max-width: none !important;
   }
   
-  .mobile_button_intro button {
+  .m_button_intro button {
     width: 100%;
     padding: 15px 20px;
   }
   
-  /* Map */
-  .map {
-    min-width: 250px;
-    width: 95%;
-    height: 250px;
+  .m_center {
+    padding: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .m_form_head {
+    width: 95% !important;
+    padding: 0px 0px !important;
+  }
+  .m_text_box {
+    width: 100% !important;
+    padding: 20px 20px !important;
+    margin: 0px !important;
+  }
+
+  .m_vobx {
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: start;
+    align-items: start;
+    gap: 0px !important;
+
+  }
+
+  .m_filter {
+    width: 100%;
+    padding-right: 0px;
   }
 }

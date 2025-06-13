@@ -105,7 +105,7 @@
 
 
 
-  <div class="hbox_center mobile_button_intro"
+  <div class="hbox_center m_button_intro"
     style="justify-content: space-evenly; max-width: 835px; width: 100%;">
       <button onclick="document.location='projets.html'">Voir nos réalisations</button>
       <button onclick="document.location='contact.html'">Contactez-nous</button>
@@ -113,45 +113,46 @@
   </div>
 </div>
  
-<div class="vbox_center">
-  <div class="hbox_center text_image center_reverse">
-    <div class="vbox"
+<div class="vbox_center ">
+  
+  
+  <div class="hbox_center text_image m_flex_start_reverse">
+    <div class="vbox m_no_margs"
       style="margin-right: 45px;
         max-width: 450px;
-        min-width: 350px; ">    
+        min-width: 350px;">    
         <div class="titre big">
             <a href="services.html">Services</a>
         </div>
         <br>
-        <br>
         <p>Notre entreprise propose une gamme complète de services de pliage de métal pour les secteurs commerciaux, résidentiels et industriels.</p> 
         <p>Pour que votre projet se passe dans les meilleures conditions, des accessoires sont en vente dans nos bureaux.</p>
-  
+
     </div>
 
-    <div class="image_container" style="max-width: 950px; min-width: 250px; min-height: 416px; max-height: 416px;"> 
+    <div class="image_container image_container_big"> 
       <img src="images/Photos/Services.JPG">
     </div>
   </div>
 
-  <div class="hbox_center"
-    style="width: 90%;">
-    <div class="hbox" style="min-width: 40%; min-height: 300px; justify-content: end; ">
-      <div class="image_container" style="max-width: 950px; min-width: 250px; min-height: 416px; max-height: 416px;"> 
+  <br>
+
+  <div class="hbox_center">
+    <div class="hbox m_remove_all" style="min-width: 40%; min-height: 300px; justify-content: end;">
+      <div class="image_container image_container_big"> 
         <img src="images/Photos/Produits.JPG">
       </div>
 
     </div>
 
-    <div class="hbox services" style="width: 50%; min-height: 300px; align-items: center;  margin-left: 75px;">
-      <div class="vbox"
+    <div class="hbox m_remove_all m_width_big" style="width: 50%; min-height: 300px; align-items: center;  margin-left: 75px;">
+      <div class="vbox m_remove_all"
         style="
         max-width: 450px;
         min-width: 350px;">    
         <div class="titre big">
             <a href="services.html">Produits</a>
         </div>
-        <br>
         <br>
         <p>Grâce à notre vaste inventaire, nous pouvons vous proposer un large choix de couleurs et de matériaux, en quantité suffisante, afin de réaliser votre projet dans les meilleurs délais.</p>
       </div>
@@ -165,7 +166,7 @@
 <br>
 
 <!-- Section avec image et texte -->
-  <div class="vbox realisations"
+  <div class="vbox m_realisations"
     style="
     max-width: 450px;
     min-width: 350px;
@@ -221,7 +222,7 @@
 
   <div class="vbox_center" style="width:95%;">
     <br>
-    <div class="vbox_center m_fournisseur" style="width:65%;"> 
+    <div class="vbox_center m_width_big" style="width:65%;"> 
       <div class="hbox m_reverse_hbox" style="gap: 100px;"> 
         <div class="image_container">
           <img src="images/Revêtements/Gentek-removebg-preview.png"/>
@@ -297,7 +298,52 @@
   });
 </script>
 
+
+
 <!--------------------------------------------------- Fin du Footer --------------------------------------------------->
+
+
+<script>
+    // Script pour le menu hamburger mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const navOverlay = document.getElementById('navOverlay');
+        const dropdownProduits = document.getElementById('dropdownProduits');
+
+        // Toggle du menu principal
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Fermer le menu
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Event listeners
+        menuToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', closeMenu);
+
+
+        // Ajuster le comportement selon la taille d'écran
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+
+    });
+</script>
+
+
 
 <!---------------------- Scripts -------------------------->
 
@@ -349,45 +395,6 @@
 </script>
 
 
-<script>
-    // Script pour le menu hamburger mobile
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        const navOverlay = document.getElementById('navOverlay');
-        const dropdownProduits = document.getElementById('dropdownProduits');
-
-        // Toggle du menu principal
-        function toggleMenu() {
-            menuToggle.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        }
-
-        // Fermer le menu
-        function closeMenu() {
-            menuToggle.classList.remove('active');
-            mobileNav.classList.remove('active');
-            navOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Event listeners
-        menuToggle.addEventListener('click', toggleMenu);
-        navOverlay.addEventListener('click', closeMenu);
-
-
-        // Ajuster le comportement selon la taille d'écran
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
-        });
-
-
-    });
-</script>
 
 
 </body>

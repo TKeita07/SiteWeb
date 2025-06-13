@@ -1,35 +1,41 @@
 .slideshow {
+  display: flex;
+  overflow: hidden;
+
   cursor: pointer;
   
   position: relative;
   width: 55%;
-  min-width: 650px;
-  height: 375px;
-  overflow: hidden;
+  min-width: 600px;
+  height: 425px;
 }
 
 .slide-image-item {
+  flex: 0 0 auto;
+  cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
   opacity: 0;
   transition: opacity 2s ease;
+  width: 100%;
+  height: 100%;
 }
+
+.slide-image-item img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ou 'cover' selon l'effet voulu */
+}
+
+
 
 .slide-image-item.active {
   opacity: 1;
   z-index: 1;
 }
-
-.slide-image-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 
 .slide-image-item:hover .some-overlay-text,
 .slide-image-item.hovering .some-overlay-text {
@@ -89,7 +95,49 @@
 .slide_simple_image {
   position: relative;
   width: 55%;
-  min-width: 650px;
-  height: 375px;
+  min-width: 600px;
+  height: 425px;
+
+}
+
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+/* ------------------ Mobile ------------------ */
+/* Mobile - écrans moyens */
+@media screen and (max-width: 768px) {
+  .slide_outside_container {
+      gap: 10px;
+      padding: 20px 20px; 
+  }
+
+  .slideshow {
+    cursor: pointer;
+    position: relative;
+    min-width: 0px;
+    width: 100%;
+    height: 235px;
+    overflow: hidden;
+  }
+
+  .slide_simple_image {
+    position: relative;
+    min-width: 0px;
+    width: 100%;
+    height: 235px;
+
+  }
+
+  .slide_title_right {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px; 
+  }
+
+  .slide_title_left {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px; 
+  }
+  
 
 }

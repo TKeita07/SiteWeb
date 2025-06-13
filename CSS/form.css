@@ -3,9 +3,17 @@ form {
   min-width: 350px;
 }
 
-.form-input, .form-textarea{
+.form-input{
   width: 100%;
   padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #3d9be9;
+  background-color: #fff5f0;
+  resize: none;
+}
+
+.form-textarea{
+  width: 100%;
   margin-top: 5px;
   border: 1px solid #3d9be9;
   background-color: #fff5f0;
@@ -35,4 +43,52 @@ input[type="file"] {
   content: "*";
   color: red;
   margin-left: 4px;
+}
+
+.formHbox {
+  gap: 10px;
+  width: 100%;
+}
+
+.image_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 650px;
+  height: 750px;
+}
+
+.image_form img {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+/* ------------------ Mobile ------------------ */
+/* Mobile - écrans moyens */
+@media screen and (max-width: 768px) {
+
+  .formHbox {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 75% !important;
+  }
+
+  .image_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 175px;
+  }
+
+  .image_form img {
+    object-fit: cover;
+    width: 100%;
+  }
+
 }
