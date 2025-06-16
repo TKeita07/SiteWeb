@@ -9,7 +9,7 @@ if (!in_array(strtolower($extension), $allowed_extensions)) {
 
 if ($_FILES['fichier']['error'] === 0) {
     $dossier = 'Promotions/';
-    $nom_fichier = 'promotions.pdf'; // 🔁 Nom fixe souhaité
+    $nom_fichier = 'Promotions.pdf'; // 🔁 Nom fixe souhaité
 
     // Déplace et renomme le fichier
     if (move_uploaded_file($_FILES['fichier']['tmp_name'], $dossier . $nom_fichier)){
