@@ -15,8 +15,8 @@ if (!isset($_SESSION['admin'])) {
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/header.css" />
 </head>
 
 
@@ -47,6 +47,7 @@ if (!isset($_SESSION['admin'])) {
     <a href="admin.php" class="nav-item" style="background-color: white; color: #000;">Admin Acceuil</a>
     <a href="formulaires.php" class="nav-item">Formulaires</a>
     <a href="promos.php" class="nav-item">Promotions</a>
+    <a href="soumission.php" class="nav-item">Tests de Soumissions</a>
   </nav>
 </header>
 

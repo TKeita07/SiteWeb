@@ -1,5 +1,8 @@
 <?php
-$db = new PDO('sqlite:Formulaires/formulaires.sqlite');
+
+$db = new PDO('sqlite:../Formulaires/formulaires.sqlite');
+
+
 
 // Récupération des données
 $nom = $_POST['nom'];
@@ -15,7 +18,7 @@ $date = date('Y-m-d H:i:s');
 $statut = 'Recu';
 
 // Dossier des fichiers
-$dossier = 'Formulaires/uploads/';
+$dossier = '../Formulaires/uploads/';
 if (!is_dir($dossier)) {
     mkdir($dossier, 0755, true);
 }
@@ -35,9 +38,17 @@ function traiterFichier($champ, $dossier) {
 }
 
 // Traitement des 3 fichiers
-[$fichier1, $fichier1_nom] = traiterFichier('fichier1', $dossier);
-[$fichier2, $fichier2_nom] = traiterFichier('fichier2', $dossier);
-[$fichier3, $fichier3_nom] = traiterFichier('fichier3', $dossier);
+$resultat = traiterFichier('fichier1', $dossier);
+$fichier1 = $resultat[0];
+$fichier1_nom = $resultat[1];
+
+$resultat = traiterFichier('fichier2', $dossier);
+$fichier2 = $resultat[0];
+$fichier2_nom = $resultat[1];
+
+$resultat = traiterFichier('fichier3', $dossier);
+$fichier3 = $resultat[0];
+$fichier3_nom = $resultat[1];
 
 // Insertion
 $stmt = $db->prepare("
@@ -54,5 +65,4 @@ $stmt->execute([
     $fichier1_nom, $fichier2_nom, $fichier3_nom
 ]);
 
-echo "Formulaire avec fichiers enregistré.";
 ?>

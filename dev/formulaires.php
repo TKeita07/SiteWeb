@@ -8,7 +8,7 @@ if (!isset($_SESSION['admin'])) {
 
 <?php
 
-$db = new PDO('sqlite:Formulaires/formulaires.sqlite');
+$db = new PDO('sqlite:../Formulaires/formulaires.sqlite');
 
 // Traitement des mises à jour de statut
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -45,12 +45,16 @@ $resultat = $db->query("SELECT * FROM forms ORDER BY date DESC");
 $formulaires = $resultat->fetchAll(PDO::FETCH_ASSOC);
 
 function couleurStatut($statut) {
-    return match ($statut) {
-        'Recu' => '#e0f0ff',
-        'EnCours' => '#fff5cc',
-        'Terminer' => '#d8ffd8',
-        default => '#ffffff',
-    };
+    switch ($statut) {
+        case 'Recu':
+            return '#e0f0ff';
+        case 'EnCours':
+            return '#fff5cc';
+        case 'Terminer':
+            return '#d8ffd8';
+        default:
+            return '#ffffff';
+    }
 }
 
 function afficherFichier($chemin, $nom) {
@@ -79,8 +83,8 @@ function afficherFichier($chemin, $nom) {
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/header.css" />
 
     <style>
         .modal {
@@ -166,6 +170,7 @@ function afficherFichier($chemin, $nom) {
     <a href="admin.php" class="nav-item">Admin Acceuil</a>
     <a href="formulaires.php" class="nav-item" style="background-color: white; color: #000;">Formulaires</a>
     <a href="promos.php" class="nav-item">Promotions</a>
+    <a href="soumission.php" class="nav-item">Tests de Soumissions</a>
   </nav>
 </header>
 
@@ -234,7 +239,7 @@ function afficherFichier($chemin, $nom) {
                     <div id="modal-<?= $form['id'] ?>" class="modal">
                         <div class="modal-content">
                             <span class="close-btn" onclick="closeModal(<?= $form['id'] ?>)">&times;</span>
-                            <h2>Détails du formulaire #<?= $form['id'] ?></h2>
+                            <h2>Détails du formulaire</h2>
                             <p><strong>Statut :</strong> <?= htmlspecialchars($form['statut']) ?></p>
                             <p><strong>Date :</strong> <?= htmlspecialchars($form['date']) ?></p>
                             <p><strong>Nom :</strong> <?= htmlspecialchars($form['nom']) ?></p>

@@ -62,7 +62,7 @@ if (!isset($_SESSION['admin'])) {
         margin: 0;
         text-align: center;
         padding-top: 150px;">
-        <p class="blue-text">Mise à jour du fichier Promotions</p>
+        <p class="blue-text">Mise à jour du fichier de promotions</p>
         <form action="upload.php" method="post" enctype="multipart/form-data">
           <br>
           <br>
@@ -75,7 +75,7 @@ if (!isset($_SESSION['admin'])) {
 
               <!-- Lier un label à l'input caché, et utiliser une image comme déclencheur -->
 
-              <h3>Cliquer sur Polly pour ajouter un fichier promotion</h3>
+              <h3>Cliquer sur Polly pour ajouter un fichier promotions.pdf</h3>
               <label for="fichier" style="cursor: pointer;">
                 <div class="image_container send" style="width: 326px;">
                   <img src="images/Promotions/polly.png" alt="Choisir un fichier">

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin'])) {
+    header('Location: login.html');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,10 +15,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="CSS/header.css" />
-  <link rel="stylesheet" href="CSS/footer.css" />
-  <link rel="stylesheet" href="CSS/form.css" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/header.css" />
+  <link rel="stylesheet" href="../CSS/footer.css" />
+  <link rel="stylesheet" href="../CSS/form.css" />
 </head>
 
 
@@ -35,35 +43,13 @@
     </div>
 
   </div>
-  
-  <button class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-  </button>
-  <!-- Overlay pour fermer le menu -->
-  <div class="nav-overlay" id="navOverlay"></div>
 
-  <nav id="mobileNav" >
-    <a href="index.html" class="nav-item">Accueil</a>
-    <div class="nav-item-p">
-      <div class="dropdown ">
-        <a href="produits.html" class="nav-item">Produits</a>
-        <div class="dropdown-content">
-              <a href="produits-materiaux.html"  class="nav-item">Matériaux</a>
-              <a href="produits-couleurs.html" class="nav-item">Couleurs</a>
-              <a href="produits-moulures.html" class="nav-item">Moulures</a>
-              <a href="produits-revetements.html" class="nav-item">Revêtements</a>
-              <a href="produits-accessoires.html" class="nav-item">Accessoires</a>
-        </div>
-      </div>
-    </div>
 
-    <a href="services.html" class="nav-item">Services</a>
-    <a href="projets.html" class="nav-item">Projets</a>
-    <a href="apropos.html" class="nav-item">À propos</a>
-    <a href="contact.html" class="nav-item">Contact</a>
-    <a href="soumission.html" class="nav-item" style="background-color: white; color: #000;">Soumission</a>
+  <nav>
+    <a href="admin.php" class="nav-item">Admin Acceuil</a>
+    <a href="formulaires.php" class="nav-item">Formulaires</a>
+    <a href="promos.php" class="nav-item">Promotions</a>
+    <a href="soumission.php" class="nav-item" style="background-color: white; color: #000;">Tests de Soumissions</a>
   </nav>
 </header>
 
@@ -71,19 +57,18 @@
 
 <!--------------------------------------------------- Fin du Header --------------------------------------------------->
 
-<div class="vbox m_center">
-  <br>
-  <div class="vbox m_form_head" style="width: 750px; padding: 50px 50px 50px 100px;">
-    <h2>Nous joindre</h2>
-    
-    <div class="blue-text">
-        <p>Demande de soumission</p>
-    </div>
 
-    <p>N'hésitez pas à nous faire parvenir une demande de soumission en utilisant le formulaire ci-dessous ou en appelant au 418-682-8653</p>
 
+<div class="vbox_center" 
+  style="
+  gap: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: auto;">
+  <div class="blue-text">
+    <p >TEMPORAIRE</p>
   </div>
-  <br>
+
 </div>
 
 <div class="vbox_center">
@@ -197,11 +182,6 @@
 
       </form>
     </div>
-
-    <div class="image_form"> 
-      <img src="images/Photos/Soumission.png">
-    </div>
-
     
   </div>
 </div>
@@ -209,7 +189,6 @@
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   const formData = new FormData(this);
-
   // Envoyer vers form-db.php
   fetch('form-db.php', {
     method: 'POST',
@@ -275,7 +254,7 @@ function removeFichier(fichier) {
 
 <section class="footer">
   <div class="footer-column">
-    <img src="images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
+    <img src="../images/Logo_PNG_1.png" alt="Logo Pliage Québec" class="footer-logo">
   </div>
 
   <div class="footer-column">
