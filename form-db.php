@@ -1,8 +1,8 @@
 <?php
 
-$db = new PDO('sqlite:../Formulaires/formulaires.sqlite');
+$db = new PDO('sqlite:Formulaires/formulaires.sqlite');
 
-
+date_default_timezone_set('America/Toronto');
 
 // Récupération des données
 $nom = $_POST['nom'];
@@ -14,9 +14,8 @@ $couleur = $_POST['couleur'];
 $dimension = $_POST['dimension'];
 $epaisseur = $_POST['epaisseur'];
 $message = $_POST['message'];
-$date = date('Y-m-d H:i:s');
+$date = date('Y-m-d H:i');
 $statut = 'Recu';
-
 // Dossier des fichiers
 $dossier = '../Formulaires/uploads/';
 if (!is_dir($dossier)) {

@@ -58,14 +58,11 @@ if (!isset($_SESSION['admin'])) {
 <body>
     <div class="vbox_center"
         style="
-        height: 85vh;
         margin: 0;
         text-align: center;
-        padding-top: 150px;">
+        padding-top: 10px;">
         <p class="blue-text">Mise à jour du fichier de promotions</p>
         <form action="upload.php" method="post" enctype="multipart/form-data">
-          <br>
-          <br>
           <br>
 
         
@@ -77,7 +74,7 @@ if (!isset($_SESSION['admin'])) {
 
               <h3>Cliquer sur Polly pour ajouter un fichier promotions.pdf</h3>
               <label for="fichier" style="cursor: pointer;">
-                <div class="image_container send" style="width: 326px;">
+                <div class="image_container send" style="width: 326px; height: 275px;">
                   <img src="images/Promotions/polly.png" alt="Choisir un fichier">
                 </div>
               </label>
@@ -100,10 +97,8 @@ if (!isset($_SESSION['admin'])) {
 
         </form>
           <br>
-          <br>
-          <br>
-        <button onclick="document.location='index.html'">Retour au site</button>
-
+        <button onclick="document.location='admin.php'">Retour à Admin</button>
+        <br>
     </div>
 
 

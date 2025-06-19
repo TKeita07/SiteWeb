@@ -47,7 +47,6 @@ if (!isset($_SESSION['admin'])) {
     <a href="admin.php" class="nav-item" style="background-color: white; color: #000;">Admin Acceuil</a>
     <a href="formulaires.php" class="nav-item">Formulaires</a>
     <a href="promos.php" class="nav-item">Promotions</a>
-    <a href="soumission.php" class="nav-item">Tests de Soumissions</a>
   </nav>
 </header>
 
@@ -61,9 +60,10 @@ if (!isset($_SESSION['admin'])) {
   padding-top: 30px;
   padding-bottom: 30px;
   width: auto;">
-  <div class="blue-text">
-    <p >Page Admin</p>
+  <div class="blue-text" style="max-width: 75%; align-self: center; text-align: center;">
+    <p >Bienvenue dans la page d'administration du site web pliagequebec.com.</p>
   </div>
+  <h3></h3>
 
 </div>
 </body>

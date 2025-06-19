@@ -8,7 +8,7 @@ if (!isset($_SESSION['admin'])) {
 
 <?php
 
-$db = new PDO('sqlite:../Formulaires/formulaires.sqlite');
+$db = new PDO('sqlite:Formulaires/formulaires.sqlite');
 
 // Traitement des mises à jour de statut
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -170,7 +170,6 @@ function afficherFichier($chemin, $nom) {
     <a href="admin.php" class="nav-item">Admin Acceuil</a>
     <a href="formulaires.php" class="nav-item" style="background-color: white; color: #000;">Formulaires</a>
     <a href="promos.php" class="nav-item">Promotions</a>
-    <a href="soumission.php" class="nav-item">Tests de Soumissions</a>
   </nav>
 </header>
 
